@@ -16,296 +16,104 @@
   --border-dim:#1a1a1a;
   --font-sans: 'Inter', 'Helvetica Neue', sans-serif;
 }
-
-body{
-    background-color: var(--bg-pure);
-    color: var(--text-main);
-    font-family: var(--font-sans);
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-}
-
+body{background-color: var(--bg-pure); color: var(--text-main); font-family: var(--font-sans); margin: 0; padding: 0; -webkit-font-smoothing: antialiased;}
 .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    padding: 50px 0;
-    background: radial-gradient(circle at center, #1a0000 0%, #000 70%);
-    border-radius: 20px;
-    margin-bottom: 30px;
-    border: 1px solid var(--border-dim);
-}
-
-.hero h1 {
-    font-size: 48px;
-    font-weight: 800;
-    letter-spacing: 12px;
-    margin: 0;
-    text-transform: uppercase;
-    text-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-}
-
-.live-status-bar {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: rgba(255, 0, 0, 0.05);
-    border: 1px solid var(--accent-red-dim);
-    padding: 8px 24px;
-    border-radius: 99px;
-    margin-top: 20px;
-}
-
-.live-dot {
-    width: 8px; height: 8px;
-    background: var(--accent-red);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent-red);
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.4; transform: scale(1.2); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
-/* TABS */
-.tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid var(--border-dim);
-    padding-bottom: 15px;
-}
-
-.tab-btn {
-    background: transparent;
-    border: 1px solid var(--border-dim);
-    color: var(--text-dim);
-    padding: 10px 25px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
+.hero { text-align: center; padding: 50px 0; background: radial-gradient(circle at center, #1a0000 0%, #000 70%); border-radius: 20px; margin-bottom: 30px; border: 1px solid var(--border-dim); }
+.hero h1 { font-size: 48px; font-weight: 800; letter-spacing: 12px; margin: 0; text-transform: uppercase; text-shadow: 0 0 20px rgba(255, 0, 0, 0.3); }
+.live-status-bar { display: inline-flex; align-items: center; gap: 12px; background: rgba(255, 0, 0, 0.05); border: 1px solid var(--accent-red-dim); padding: 8px 24px; border-radius: 99px; margin-top: 20px; }
+.live-dot { width: 8px; height: 8px; background: var(--accent-red); border-radius: 50%; box-shadow: 0 0 10px var(--accent-red); animation: pulse 2s infinite; }
+@keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.2); } 100% { opacity: 1; transform: scale(1); } }
+.tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; border-bottom: 1px solid var(--border-dim); padding-bottom: 15px; }
+.tab-btn { background: transparent; border: 1px solid var(--border-dim); color: var(--text-dim); padding: 10px 25px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
 .tab-btn:hover { color: var(--text-main); border-color: #333; }
-.tab-btn.active {
-    background: #111;
-    color: var(--text-main);
-    border-color: var(--accent-red-dim);
-    box-shadow: 0 0 15px rgba(255,0,0,0.1);
-}
-
+.tab-btn.active { background: #111; color: var(--text-main); border-color: var(--accent-red-dim); box-shadow: 0 0 15px rgba(255,0,0,0.1); }
 .tab-panel { display: none; animation: fadeIn 0.4s ease; }
 .tab-panel.active { display: block; }
-
 @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
-
-/* STATS GRID */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.stat-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-dim);
-    padding: 20px;
-    border-radius: 12px;
-    text-align: center;
-    transition: 0.3s;
-}
-
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 40px; }
+.stat-card { background: var(--bg-card); border: 1px solid var(--border-dim); padding: 20px; border-radius: 12px; text-align: center; transition: 0.3s; }
 .stat-card:hover { border-color: var(--accent-red-dim); }
 .stat-val { font-size: 24px; font-weight: 700; display: block; }
 .stat-lab { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
-
-/* FILTERS */
-.filters {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    background: transparent;
-    border: 1px solid var(--border-dim);
-    color: var(--text-dim);
-    padding: 6px 16px;
-    border-radius: 5px;
-    font-size: 12px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.filter-btn.active {
-    background: white;
-    color: black;
-    border-color: white;
-}
-
-/* SHOW LIST */
-.year-header {
-    font-size: 11px;
-    color: var(--text-dim);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-bottom: 1px solid var(--border-dim);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.show-row {
-    display: grid;
-    grid-template-columns: 80px 1fr auto;
-    align-items: center;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 4px;
-    cursor: pointer;
-    transition: 0.2s;
-    border: 1px solid transparent;
-}
-
-.show-row:hover {
-    background: #0f0f0f;
-    border-color: #222;
-    transform: translateX(8px);
-}
-
+.filters { display: flex; justify-content: center; gap: 8px; margin-bottom: 30px; flex-wrap: wrap; }
+.filter-btn { background: transparent; border: 1px solid var(--border-dim); color: var(--text-dim); padding: 6px 16px; border-radius: 5px; font-size: 12px; cursor: pointer; transition: 0.2s; }
+.filter-btn.active { background: white; color: black; border-color: white; }
+.year-header { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--border-dim); padding-bottom: 10px; margin-bottom: 20px; }
+.show-row { display: grid; grid-template-columns: 80px 1fr auto; align-items: center; padding: 15px; border-radius: 10px; margin-bottom: 4px; cursor: pointer; transition: 0.2s; border: 1px solid transparent; }
+.show-row:hover { background: #0f0f0f; border-color: #222; transform: translateX(8px); }
 .date-box { text-align: left; }
 .d-day { font-size: 20px; font-weight: 700; line-height: 1; }
 .d-mon { font-size: 10px; color: var(--text-dim); text-transform: uppercase; }
-
 .venue-info { font-size: 14px; font-weight: 500; }
 .venue-sub { font-size: 11px; color: var(--text-dim); margin-top: 2px;}
-
-.region-label {
-    font-size: 9px;
-    padding: 2px 6px;
-    border-radius: 3px;
-    background: #222;
-    color: #888;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-.tag {
-    font-size: 10px;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-weight: 600;
-}
+.region-label { font-size: 9px; padding: 2px 6px; border-radius: 3px; background: #222; color: #888; margin-right: 8px; vertical-align: middle; }
+.tag { font-size: 10px; padding: 4px 12px; border-radius: 4px; font-weight: 600; }
 .tag-done { background: #111; color: #555; }
 .tag-live { background: var(--accent-red); color: white; box-shadow: 0 0 15px rgba(255,0,0,0.4); }
 .tag-soon { background: #1a1505; color: #c5a059; border: 1px solid #332a10;}
 .tag-upcoming { background: rgba(68, 163, 255, 0.1); color: var(--accent-blue); border: 1px solid rgba(68, 163, 255, 0.2); }
-
-/* OUTFIT GALLERY */
-.outfit-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-.outfit-photo-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-dim);
-  border-radius: 8px;
-  overflow: hidden;
-  transition: 0.3s;
-}
+.outfit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
+.outfit-photo-card { background: var(--bg-card); border: 1px solid var(--border-dim); border-radius: 8px; overflow: hidden; transition: 0.3s; }
 .outfit-photo-card:hover { border-color: var(--accent-red-dim); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.5);}
-.outfit-photo-card img {
-  width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  display: block;
-}
-.photo-caption {
-  padding: 15px;
-  background: #050505;
-  text-align: center;
-}
+.outfit-photo-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+.photo-caption { padding: 15px; background: #050505; text-align: center; }
 .photo-caption strong { font-size: 12px; display: block; color: #fff; margin-bottom: 4px;}
 .photo-caption span { font-size: 9px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px;}
 
-/* MODAL DE SETLISTS */
-.modal-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.95);
-    display: none; align-items: center; justify-content: center;
-    z-index: 1000;
+/* CONTACT LINK BUTTONS */
+.contact-btn {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid var(--border-dim);
+    padding: 15px 40px;
+    border-radius: 50px;
+    transition: 0.3s;
+    width: 200px;
+    background: #111;
 }
-.modal-overlay.active { display: flex; }
-.modal-box {
-    background: #050505;
-    border: 1px solid #222;
-    width: 90%; max-width: 500px; max-height: 85vh; overflow-y: auto;
-    border-radius: 15px;
-    padding: 30px;
-    position: relative;
+.contact-btn:hover {
+    border-color: var(--accent-red);
+    background: var(--accent-red-dim);
+    box-shadow: 0 0 15px rgba(255,0,0,0.2);
 }
-.modal-close {
-    position: absolute; top: 15px; right: 15px;
-    background: #111; border: none; color: white;
-    width: 30px; height: 30px; border-radius: 50%;
-    cursor: pointer; transition: 0.2s;
-}
-.modal-close:hover { background: var(--accent-red); }
 
-.setlist-item { 
-    display: flex; gap: 15px; padding: 12px 0; 
-    border-bottom: 1px solid #1a1a1a; align-items: flex-start;
-}
-.track-num { 
-    font-size: 11px; font-weight: bold; color: #555; 
-    min-width: 20px; text-align: right; padding-top: 2px;
-}
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; align-items: center; justify-content: center; z-index: 1000; }
+.modal-overlay.active { display: flex; }
+.modal-box { background: #050505; border: 1px solid #222; width: 90%; max-width: 500px; max-height: 85vh; overflow-y: auto; border-radius: 15px; padding: 30px; position: relative; }
+.modal-close { position: absolute; top: 15px; right: 15px; background: #111; border: none; color: white; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; transition: 0.2s; }
+.modal-close:hover { background: var(--accent-red); }
+.setlist-item { display: flex; gap: 15px; padding: 12px 0; border-bottom: 1px solid #1a1a1a; align-items: flex-start; }
+.track-num { font-size: 11px; font-weight: bold; color: #555; min-width: 20px; text-align: right; padding-top: 2px; }
 .track-num.star { color: #c5a059; font-size: 14px;}
 .track-info { display: flex; flex-direction: column; gap: 4px; }
 .track-title { font-size: 14px; color: #eee; font-weight: 500;}
 .track-title.star { color: #c5a059; font-weight: 700;}
 .track-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .track-note { font-size: 11px; color: #888; font-style: italic; }
-
-@media (max-width: 600px) {
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .hero h1 { font-size: 28px; }
-}
+@media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 28px; } }
 </style>
 </head>
 <body>
-
 <div class="container">
     <div class="hero">
         <h1>XO ARCHIVE</h1>
-        <div class="live-status-bar">
-            <div class="live-dot"></div>
-            <span style="font-size: 11px; letter-spacing: 2px; font-weight: 600; color: var(--text-dim);">LIVE TOUR MONITORING</span>
-        </div>
+        <div class="live-status-bar"><div class="live-dot"></div><span style="font-size: 11px; letter-spacing: 2px; font-weight: 600; color: var(--text-dim);">LIVE TOUR MONITORING</span></div>
     </div>
-
+    
+    <!-- 3 TABS -->
     <div class="tabs">
         <button class="tab-btn active" onclick="switchTab('shows', this)">Concerts</button>
         <button class="tab-btn" onclick="switchTab('outfit', this)">Visual Evolution</button>
+        <button class="tab-btn" onclick="switchTab('contact', this)">Contact</button>
     </div>
-
+    
+    <!-- PANEL: SHOWS -->
     <div id="tab-shows" class="tab-panel active">
         <div class="stats-grid" id="stats"></div>
-
         <div class="filters">
             <button class="filter-btn active" onclick="filterShows('all',this)">All</button>
             <button class="filter-btn" onclick="filterShows('usa',this)">USA</button>
@@ -314,61 +122,46 @@ body{
             <button class="filter-btn" onclick="filterShows('europe',this)">Europe</button>
             <button class="filter-btn" onclick="filterShows('oceania',this)">Oceania</button>
         </div>
-
         <div id="shows-container"></div>
     </div>
-
+    
+    <!-- PANEL: OUTFITS -->
     <div id="tab-outfit" class="tab-panel">
       <div class="outfit-grid">
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/59KZNRht/IMG-8231.jpg" alt="Latam 2023 Outfit">
-          <div class="photo-caption">
-            <strong>Latam 2023: Red Velvet</strong>
-            <span>Monterrey Opening Show</span>
-          </div>
-        </div>
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/6q2bGHCM/IMG-8226.jpg" alt="Red Coat Outfit">
-          <div class="photo-caption">
-            <strong>Leg 1: Red Coat</strong>
-            <span>North America 2022</span>
-          </div>
-        </div>
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/PxPn2Qmz/IMG-8223.jpg" alt="Classic Suit Outfit">
-          <div class="photo-caption">
-            <strong>Leg 1: Classic Suit</strong>
-            <span>Toronto / Select Dates</span>
-          </div>
-        </div>
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/3Nm6cSWD/IMG-8229.jpg" alt="Tactical Vest Outfit">
-          <div class="photo-caption">
-            <strong>Leg 2: Tactical Vest</strong>
-            <span>Europe & Latam 2023</span>
-          </div>
-        </div>
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/8CxZgR2W/IMG-8228.jpg" alt="Hurry Up Tomorrow Cloak">
-          <div class="photo-caption">
-            <strong>Leg 3: Gold & Shadow</strong>
-            <span>2025 - 2026 Era</span>
-          </div>
-        </div>
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/zv4tw9NT/IMG-8162.jpg" alt="Latam 2026 Outfit">
-          <div class="photo-caption">
-            <strong>Latam 2026: Camo Cyborg</strong>
-            <span>Latin America Leg</span>
-          </div>
-        </div>
-      </div>
-      <div style="margin-top: 40px; text-align: center; border-top: 1px solid #1a1a1a; padding-top: 20px;">
-        <p style="font-size: 11px; color: #444; letter-spacing: 1px; text-transform: uppercase;">Olivier</p>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/59KZNRht/IMG-8231.jpg"><div class="photo-caption"><strong>Latam 2023: Robot Arm Outfit</strong><span>First Show of the Leg, Monterrey</span></div></div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/6q2bGHCM/IMG-8226.jpg"><div class="photo-caption"><strong>Leg 1: Red Coat</strong><span>North America 2022</span></div></div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/PxPn2Qmz/IMG-8223.jpg"><div class="photo-caption"><strong>Leg 1: Classic Suit</strong><span>Toronto / Select Dates</span></div></div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/3Nm6cSWD/IMG-8229.jpg"><div class="photo-caption"><strong>Leg 2: Tactical Vest</strong><span>Europe & Latam 2023</span></div></div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/8CxZgR2W/IMG-8228.jpg"><div class="photo-caption"><strong>Leg 3: Gold & Shadow</strong><span>2025-2026 Era</span></div></div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/zv4tw9NT/IMG-8162.jpg"><div class="photo-caption"><strong>Latam 2026: The Cyborg</strong><span>2026 Latin America Leg</span></div></div>
       </div>
     </div>
+
+    <!-- PANEL: CONTACT (NEW) -->
+    <div id="tab-contact" class="tab-panel">
+        <div style="text-align: center; padding: 60px 20px; border: 1px solid var(--border-dim); border-radius: 12px; background: var(--bg-card); max-width: 500px; margin: 40px auto;">
+            <h2 style="font-size: 20px; letter-spacing: 2px; margin-top: 0; color: #fff;">SUGGESTIONS & BUG REPORTS</h2>
+            <p style="font-size: 13px; color: var(--text-dim); margin-bottom: 40px; line-height: 1.6;">
+                Did you notice an error in a setlist?<br>
+                Do you have a better quality picture for an outfit?<br>
+                Let me know through any of these channels to keep the archive updated.
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: 15px; align-items: center;">
+                <a href="mailto:xoarchivexo@gmail.com" class="contact-btn">Email Me</a>
+                <a href="https://instagram.com/wjoqgj" target="_blank" class="contact-btn">Instagram</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- GLOBAL SIGNATURE -->
+    <div style="margin-top: 60px; text-align: center; border-top: 1px solid #1a1a1a; padding: 40px 0 0 0;">
+        <p style="font-size: 12px; color: #fff; letter-spacing: 4px; text-transform: uppercase; font-weight: 800; margin: 0;">OLIVIER</p>
+    </div>
+
 </div>
 
+<!-- MODAL -->
 <div class="modal-overlay" id="setlist-modal" onclick="closeModal(event)">
     <div class="modal-box">
         <button class="modal-close" onclick="closeModal(event, true)">✕</button>
@@ -384,39 +177,17 @@ body{
 const TODAY = new Date('2026-04-28');
 const MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 
-// ─── SETLISTS ───
+// ─── TRAMOS DE SETLISTS ───
+const sl_na22 = [['1','Alone Again',''],['2','Gasoline',''],['3','Sacrifice','Swedish House Mafia Remix'],['4','How Do I Make You Love Me?',''],['5',"Can't Feel My Face",''],['6','Take My Breath',''],['7','Hurricane','Ye cover — intro only'],['—','Dawn FM','Interlude'],['8','Crew Love','Drake cover'],['9','Low Life','Future cover'],['10','Often',''],['11','The Hills',''],['12','Heartless',''],['13','Faith',''],['14','Starboy',''],['15','I Feel It Coming',''],['16','Kiss Land','First time live since 2013'],['17','Die for You','First time live since 2017'],['18','Call Out My Name',''],['19','After Hours','First time live'],['20','Save Your Tears',''],['21','Blinding Lights',''],['22','Is There Someone Else?','Live debut'],['23','Less Than Zero','Live debut'],['24','Wicked Games',''],['—','House of Balloons / Glass Table Girls','Encore'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
+const sl_sofi_fail = [['1','Alone Again','Show stopped here — The Weeknd lost his voice']];
+const sl_eu23 = [['1','Alone Again',''],['2','Gasoline',''],['3','Sacrifice','Swedish House Mafia Remix'],['4','How Do I Make You Love Me?',''],['5',"Can't Feel My Face",''],['6','Take My Breath',''],['—','Dawn FM','Interlude'],['7','Crew Love','Drake cover'],['8','Low Life','Future cover'],['9','Often',''],['10','The Hills',''],['11','Heartless',''],['12','Faith',''],['13','Starboy',''],['14','I Feel It Coming',''],['15','Kiss Land',''],['16','Die for You',''],['17','Call Out My Name',''],['18','After Hours',''],['19','Save Your Tears',''],['20','Blinding Lights',''],['21','Is There Someone Else?',''],['22','Less Than Zero',''],['23','Wicked Games',''],['—','House of Balloons / Glass Table Girls','Encore'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
+const sl_latam23_real = [['1','LA FAMA','Rosalía cover'],['2','Party Monster',''],['3','Take My Breath',''],['4','Sacrifice','Swedish House Mafia Remix'],['5','How Do I Make You Love Me?',''],['6',"Can't Feel My Face",''],['7','Lost in the Fire','w/ Gesaffelstein'],['8','Hurricane','Ye cover'],['9','The Hills',''],['10','Kiss Land','First half only'],['11','Often',''],['12','Crew Love','Drake cover'],['13','Starboy',''],['14','House of Balloons / Glass Table Girls',''],['15','Heartless',''],['16','Low Life','Future cover'],['17','Reminder',''],['18','CIRCUS MAXIMUS','Travis Scott cover'],['19','Faith',''],['20','After Hours',''],['21','Earned It',''],['22','Out of Time',''],['23','I Feel It Coming',''],['24','Die for You',''],['25','Is There Someone Else?',''],['26','I Was Never There',''],['27','Wicked Games',''],['28','Call Out My Name',''],['29','The Morning',''],['30','Save Your Tears',''],['31','Less Than Zero',''],['32','Blinding Lights',''],['33','Tears in the Rain',''],['34',"Creepin'",'Metro Boomin cover'],['35','Popular',''],['36','In Your Eyes',''],['37','Moth to a Flame','w/ Swedish House Mafia']];
+const sl_na25 = [['1','The Abyss',''],['2','Wake Me Up',''],['3','After Hours',''],['4','Opening Night',''],['5','Starboy',''],['6','Heartless',''],['7','Faith',''],['8','Take My Breath',''],['9','Sacrifice','Swedish House Mafia Remix'],['10','How Do I Make You Love Me?',''],['11',"Can't Feel My Face",''],['12','Lost in the Fire','w/ Gesaffelstein'],['13','Often',''],['14','Given Up on Me',''],['15','I Was Never There',''],['16','The Hills',''],['17','Baptized in Fear',''],['18','Open Hearts',''],['19','Cry for Me',''],['20','São Paulo','w/ Anitta'],['21','Timeless','w/ Playboi Carti'],['22','Rather Lie','w/ Playboi Carti'],['23',"Creepin'",''],['24','Niagara Falls',''],['25','One of the Girls',''],['26','Out of Time',''],['27','I Feel It Coming',''],['28','Die for You',''],['29','Is There Someone Else?',''],['30','Wicked Games',''],['31','Call Out My Name',''],['32','Hurry Up Tomorrow',''],['33','Save Your Tears',''],['34','Less Than Zero',''],['35','Blinding Lights',''],['—','In Heaven (Lady in the Radiator Song)','Encore · Peter Ivers & David Lynch cover'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
+const sl_latam26_n1 = [['1','Baptized in Fear',''],['2','Open Hearts',''],['3','Wake Me Up',''],['4','After Hours',''],['5','Starboy',''],['6','Heartless','w/ House of Balloons intro'],['7','Faith',''],['8','Cry for Me',''],['—',"I Can't F**king Sing",'Interlude'],['9','São Paulo','w/ Anitta'],['10','Take My Breath',''],['11','Sacrifice','Swedish House Mafia Remix'],['12','How Do I Make You Love Me?',''],['—',"A Cruel Angel's Thesis","Interludio · Yōko Takahashi (Neon Genesis Evangelion) cover"],['13',"Can't Feel My Face",''],['14','Lost in the Fire','w/ Gesaffelstein'],['15','Timeless','w/ Anitta (live)'],['16','Often',''],['17','Given Up on Me',''],['18','I Was Never There',''],['19','The Hills',''],['20',"Creepin'",''],['21','Niagara Falls',''],['22','One of the Girls',''],['—','Stargirl Interlude','Pre-recorded'],['23','Out of Time',''],['24','I Feel It Coming',''],['25','Die for You',''],['26','Is There Someone Else?',''],['27','Wicked Games',''],['28','Call Out My Name',''],['29','The Morning',''],['30','Save Your Tears',''],['31','Less Than Zero',''],['32','Blinding Lights',''],['—','Without a Warning','Encore'],['—','House of Balloons / Glass Table Girls','Encore'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
+const sl_latam26_n2 = [['1','Baptized in Fear',''],['2','Open Hearts',''],['3','Wake Me Up',''],['4','After Hours',''],['5','Starboy',''],['6','Heartless','w/ House of Balloons intro'],['7','Faith',''],['8','Cry for Me',''],['—',"I Can't F**king Sing",'Interlude'],['9','São Paulo','w/ Anitta'],['10','Take My Breath',''],['11','Sacrifice','Swedish House Mafia Remix'],['12','How Do I Make You Love Me?',''],['—',"A Cruel Angel's Thesis","Interludio · Yōko Takahashi (Neon Genesis Evangelion) cover"],['13',"Can't Feel My Face",''],['14','Lost in the Fire','w/ Gesaffelstein'],['15','Timeless','w/ Anitta (live)'],['16','Often',''],['17','Given Up on Me',''],['18','I Was Never There',''],['19','The Hills',''],['20',"Creepin'",''],['21','Niagara Falls',''],['22','One of the Girls',''],['—','Stargirl Interlude','Pre-recorded'],['23','Out of Time',''],['24','I Feel It Coming',''],['25','Die for You',''],['26','Is There Someone Else?',''],['27','Wicked Games',''],['28','Call Out My Name',''],['★','The Abyss','Added tonight'],['★','Professional','Added tonight'],['29','Save Your Tears',''],['30','Less Than Zero',''],['31','Blinding Lights',''],['—','Without a Warning','Encore'],['—','House of Balloons / Glass Table Girls','Encore'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
+const sl_rio26 = [['1','Baptized in Fear','Shortened version'],['2','Open Hearts','Shortened version'],['3','Wake Me Up','Shortened version'],['4','After Hours','Shortened version'],['5','Starboy',''],['6','Heartless',''],['7','Faith',''],['8','Cry for Me',''],['—',"I Can't F**king Sing",'Interlude'],['9','São Paulo','w/ Anitta'],['—',"Until We're Skin & Bones",'Interlude w/ House of Balloons elements'],['★','Rio','⭐ WORLDWIDE DEBUT w/ Anitta · Directed by Takashi Miike'],['10','Take My Breath',''],['11','Sacrifice','Swedish House Mafia Remix'],['12','How Do I Make You Love Me?',''],['—',"A Cruel Angel's Thesis","Interlude · Yōko Takahashi (Neon Genesis Evangelion) cover"],['13',"Can't Feel My Face",''],['14','Lost in the Fire','w/ Gesaffelstein'],['15','Timeless','w/ Anitta (live)'],['16','Often',''],['17','Given Up on Me',''],['18','I Was Never There',''],['—','Given Up on Me (reprise)','Interlude'],['19','The Hills',''],['20',"Creepin'",''],['21','Niagara Falls',''],['22','One of the Girls',''],['—','Stargirl Interlude','Pre-recorded'],['23','Out of Time','w/ Midnight Predators intro'],['24','I Feel It Coming',''],['25','Die for You',''],['26','Is There Someone Else?',''],['27','Wicked Games',''],['28','Call Out My Name',''],['29','The Abyss',''],['30','Professional',''],['31','Save Your Tears',''],['32','Less Than Zero',''],['33','Blinding Lights',''],['—','Without a Warning','Encore'],['—','House of Balloons / Glass Table Girls','Encore'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
 
-const sl_na22 = [
-    ['1', 'Alone Again', ''], ['2', 'Gasoline', ''], ['3', 'Sacrifice', 'SHM Remix'], ['4', 'How Do I Make You Love Me?', ''], ['5', "Can't Feel My Face", ''], ['6', 'Take My Breath', ''], ['7', 'Hurricane', 'Ye cover — intro only'], ['—', 'Dawn FM', 'Interlude'], ['8', 'Crew Love', 'Drake cover'], ['9', 'Low Life', 'Future cover'], ['10', 'Often', ''], ['11', 'The Hills', ''], ['12', 'Heartless', ''], ['13', 'Faith', ''], ['14', 'Starboy', ''], ['15', 'I Feel It Coming', ''], ['16', 'Kiss Land', 'First time live since 2013'], ['17', 'Die for You', 'First time live since 2017'], ['18', 'Call Out My Name', ''], ['19', 'After Hours', 'First time live'], ['20', 'Save Your Tears', ''], ['21', 'Blinding Lights', ''], ['22', 'Is There Someone Else?', 'Live debut'], ['23', 'Less Than Zero', 'Live debut'], ['24', 'Wicked Games', ''], ['—', 'House of Balloons / Glass Table Girls', 'Encore'], ['—', 'Moth to a Flame', 'Encore']
-];
-
-const sl_sofi_fail = [['1', 'Alone Again', 'Show stopped here — Lost voice']];
-
-const sl_eu23 = [
-    ['1', 'Alone Again', ''], ['2', 'Gasoline', ''], ['3', 'Sacrifice', ''], ['4', 'How Do I Make You Love Me?', ''], ['5', "Can't Feel My Face", ''], ['6', 'Take My Breath', ''], ['—', 'Dawn FM', 'Interlude'], ['7', 'Crew Love', ''], ['8', 'Low Life', ''], ['9', 'Often', ''], ['10', 'The Hills', ''], ['11', 'Heartless', ''], ['12', 'Faith', ''], ['13', 'Starboy', ''], ['14', 'I Feel It Coming', ''], ['15', 'Die for You', ''], ['16', 'Call Out My Name', ''], ['17', 'After Hours', ''], ['18', 'Save Your Tears', ''], ['19', 'Blinding Lights', ''], ['—', 'House of Balloons / Glass Table Girls', 'Encore'], ['—', 'Moth to a Flame', 'Encore']
-];
-
-const sl_latam23_real = [
-    ['1', 'LA FAMA', 'Rosalía cover'], ['2', 'Party Monster', ''], ['3', 'Take My Breath', ''], ['4', 'Sacrifice', ''], ['5', 'How Do I Make You Love Me?', ''], ['6', "Can't Feel My Face", ''], ['7', 'Lost in the Fire', 'w/ Gesaffelstein'], ['8', 'Hurricane', 'Ye cover'], ['9', 'The Hills', ''], ['10', 'Kiss Land', ''], ['11', 'Often', ''], ['12', 'Crew Love', 'Drake cover'], ['13', 'Starboy', ''], ['14', 'House of Balloons / Glass Table Girls', ''], ['15', 'Heartless', ''], ['16', 'Low Life', 'Future cover'], ['17', 'Reminder', ''], ['18', 'CIRCUS MAXIMUS', 'Travis Scott cover'], ['19', 'Faith', ''], ['20', 'After Hours', ''], ['21', 'Earned It', ''], ['22', 'Out of Time', ''], ['23', 'I Feel It Coming', ''], ['24', 'Die for You', ''], ['25', 'Is There Someone Else?', ''], ['26', 'I Was Never There', ''], ['27', 'Wicked Games', ''], ['28', 'Call Out My Name', ''], ['29', 'The Morning', ''], ['30', 'Save Your Tears', ''], ['31', 'Less Than Zero', ''], ['32', 'Blinding Lights', ''], ['33', 'Tears in the Rain', ''], ['34', "Creepin'", 'Metro Boomin cover'], ['35', 'Popular', ''], ['36', 'In Your Eyes', ''], ['37', 'Moth to a Flame', 'w/ SHM']
-];
-
-const sl_na25 = [
-    ['1', 'The Abyss', ''], ['2', 'Wake Me Up', ''], ['3', 'After Hours', ''], ['4', 'Opening Night', ''], ['5', 'Starboy', ''], ['6', 'Heartless', ''], ['7', 'Faith', ''], ['8', 'Take My Breath', ''], ['9', 'Sacrifice', ''], ['10', 'How Do I Make You Love Me?', ''], ['11', "Can't Feel My Face", ''], ['12', 'Lost in the Fire', ''], ['13', 'Often', ''], ['14', 'Given Up on Me', ''], ['15', 'I Was Never There', ''], ['16', 'The Hills', ''], ['17', 'Baptized in Fear', ''], ['18', 'Open Hearts', ''], ['19', 'Cry for Me', ''], ['20', 'São Paulo', 'w/ Anitta'], ['21', 'Timeless', 'w/ Playboi Carti'], ['22', 'Rather Lie', 'w/ Playboi Carti'], ['23', "Creepin'", ''], ['24', 'Niagara Falls', ''], ['25', 'One of the Girls', ''], ['26', 'Out of Time', ''], ['27', 'I Feel It Coming', ''], ['28', 'Die for You', ''], ['29', 'Is There Someone Else?', ''], ['30', 'Wicked Games', ''], ['31', 'Call Out My Name', ''], ['32', 'Hurry Up Tomorrow', ''], ['33', 'Save Your Tears', ''], ['34', 'Less Than Zero', ''], ['35', 'Blinding Lights', ''], ['—', 'In Heaven', 'Encore cover'], ['—', 'Moth to a Flame', 'Encore']
-];
-
-const sl_latam26_n1 = [
-    ['1', 'Baptized in Fear', ''], ['2', 'Open Hearts', ''], ['3', 'Wake Me Up', ''], ['4', 'After Hours', ''], ['5', 'Starboy', ''], ['6', 'Heartless', 'intro House of Balloons'], ['7', 'Faith', ''], ['8', 'Cry for Me', ''], ['—', "I Can't F**king Sing", 'Interlude'], ['9', 'São Paulo', 'w/ Anitta'], ['10', 'Take My Breath', ''], ['11', 'Sacrifice', ''], ['12', 'How Do I Make You Love Me?', ''], ['—', "A Cruel Angel's Thesis", "Interlude cover (Evangelion)"], ['13', "Can't Feel My Face", ''], ['14', 'Lost in the Fire', ''], ['15', 'Timeless', 'w/ Anitta (live)'], ['16', 'Often', ''], ['17', 'Given Up on Me', ''], ['18', 'I Was Never There', ''], ['19', 'The Hills', ''], ['20', "Creepin'", ''], ['21', 'Niagara Falls', ''], ['22', 'One of the Girls', ''], ['—', 'Stargirl Interlude', ''], ['23', 'Out of Time', ''], ['24', 'I Feel It Coming', ''], ['25', 'Die for You', ''], ['26', 'Is There Someone Else?', ''], ['27', 'Wicked Games', ''], ['28', 'Call Out My Name', ''], ['29', 'The Morning', ''], ['30', 'Save Your Tears', ''], ['31', 'Less Than Zero', ''], ['32', 'Blinding Lights', ''], ['—', 'Without a Warning', 'Encore'], ['—', 'House of Balloons', 'Encore'], ['—', 'Moth to a Flame', 'Encore']
-];
-
-const sl_latam26_n2 = [
-    ['1', 'Baptized in Fear', ''], ['2', 'Open Hearts', ''], ['3', 'Wake Me Up', ''], ['4', 'After Hours', ''], ['5', 'Starboy', ''], ['6', 'Heartless', ''], ['7', 'Faith', ''], ['8', 'Cry for Me', ''], ['—', "I Can't F**king Sing", 'Interlude'], ['9', 'São Paulo', 'w/ Anitta'], ['10', 'Take My Breath', ''], ['11', 'Sacrifice', ''], ['12', 'How Do I Make You Love Me?', ''], ['—', "A Cruel Angel's Thesis", "Interlude cover (Evangelion)"], ['13', "Can't Feel My Face", ''], ['14', 'Lost in the Fire', ''], ['15', 'Timeless', 'w/ Anitta (live)'], ['16', 'Often', ''], ['17', 'Given Up on Me', ''], ['18', 'I Was Never There', ''], ['19', 'The Hills', ''], ['20', "Creepin'", ''], ['21', 'Niagara Falls', ''], ['22', 'One of the Girls', ''], ['—', 'Stargirl Interlude', ''], ['23', 'Out of Time', ''], ['24', 'I Feel It Coming', ''], ['25', 'Die for You', ''], ['26', 'Is There Someone Else?', ''], ['27', 'Wicked Games', ''], ['28', 'Call Out My Name', ''], ['★', 'The Abyss', 'Added vs N1'], ['★', 'Professional', 'Added vs N1'], ['29', 'Save Your Tears', ''], ['30', 'Less Than Zero', ''], ['31', 'Blinding Lights', ''], ['—', 'Without a Warning', 'Encore'], ['—', 'House of Balloons', 'Encore'], ['—', 'Moth to a Flame', 'Encore']
-];
-
-const sl_rio26 = [
-    ['1', 'Baptized in Fear', ''], ['2', 'Open Hearts', ''], ['3', 'Wake Me Up', ''], ['4', 'After Hours', ''], ['5', 'Starboy', ''], ['6', 'Heartless', ''], ['7', 'Faith', ''], ['8', 'Cry for Me', ''], ['—', "I Can't F**king Sing", 'Interlude'], ['9', 'São Paulo', 'w/ Anitta'], ['★', 'Rio', '⭐ WORLD DEBUT w/ Anitta'], ['10', 'Take My Breath', ''], ['11', 'Sacrifice', ''], ['12', 'How Do I Make You Love Me?', ''], ['—', "A Cruel Angel's Thesis", "Interlude cover (Evangelion)"], ['13', "Can't Feel My Face", ''], ['14', 'Lost in the Fire', ''], ['15', 'Timeless', 'w/ Anitta (live)'], ['16', 'Often', ''], ['17', 'Given Up on Me', ''], ['18', 'I Was Never There', ''], ['19', 'The Hills', ''], ['20', "Creepin'", ''], ['21', 'Niagara Falls', ''], ['22', 'One of the Girls', ''], ['—', 'Stargirl Interlude', ''], ['23', 'Out of Time', ''], ['24', 'I Feel It Coming', ''], ['25', 'Die for You', ''], ['26', 'Is There Someone Else?', ''], ['27', 'Wicked Games', ''], ['28', 'Call Out My Name', ''], ['★', 'The Abyss', ''], ['★', 'Professional', ''], ['29', 'Save Your Tears', ''], ['30', 'Less Than Zero', ''], ['31', 'Blinding Lights', ''], ['—', 'Without a Warning', 'Encore'], ['—', 'House of Balloons', 'Encore'], ['—', 'Moth to a Flame', 'Encore']
-];
-
-// ─── SHOW DATABASE (114 SHOWS) ───
+// ─── BASE DE DATOS SHOWS COMPLETA ───
 const shows = [
 {date:'2022-07-14',city:'Philadelphia',country:'USA',venue:'Lincoln Financial Field',region:'usa',leg:'2022 — North America'},
 {date:'2022-07-16',city:'East Rutherford',country:'USA',venue:'MetLife Stadium',region:'usa',leg:'2022 — North America'},
@@ -557,24 +328,22 @@ const shows = [
 {date:'2026-08-28',city:'Madrid',country:'Spain',venue:'Riyadh Air Metropolitano',region:'europe',leg:'2026 — Europe/UK'},
 {date:'2026-08-29',city:'Madrid',country:'Spain',venue:'Riyadh Air Metropolitano',region:'europe',leg:'2026 — Europe/UK'},
 {date:'2026-08-30',city:'Madrid',country:'Spain',venue:'Riyadh Air Metropolitano',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-09-01',city:'Barcelona',country:'Spain',venue:'Estadio Olímpic',region:'europe',leg:'2026 — Europe/UK'},
+{date:'2026-09-01',city:'Barcelona',country:'Spain',venue:'Estadio Olímpico',region:'europe',leg:'2026 — Europe/UK'},
 {date:'2026-09-04',city:'Lisbon',country:'Portugal',venue:'Estádio da Luz',region:'europe',leg:'2026 — Europe/UK'},
 {date:'2026-09-05',city:'Lisbon',country:'Portugal',venue:'Estádio da Luz',region:'europe',leg:'2026 — Europe/UK'}
 ];
 
-// ─── LOGIC ───
 function getSetlistForShow(dateStr, legName) {
     if (dateStr === '2022-09-03') return sl_sofi_fail;
     if (dateStr === '2026-04-20') return sl_latam26_n1;
-    if (dateStr === '2026-04-21' || dateStr === '2026-04-22' || dateStr === '2026-04-30' || dateStr === '2026-05-01') return sl_latam26_n2;
+    if (dateStr === '2026-04-21' || dateStr === '2026-04-22') return sl_latam26_n2;
     if (dateStr === '2026-04-26') return sl_rio26;
-
+    if (dateStr === '2026-04-30' || dateStr === '2026-05-01') return sl_latam26_n2;
     if (legName.includes('2022')) return sl_na22;
     if (legName.includes('2023') && legName.includes('Europe')) return sl_eu23;
-    if (legName.includes('2023') && (legName.includes('Latam') || legName.includes('Latin'))) return sl_latam23_real;
+    if (legName.includes('2023') && legName.includes('Latin America')) return sl_latam23_real;
     if (legName.includes('Oceania')) return sl_latam23_real;
     if (legName.includes('2025')) return sl_na25;
-
     return [];
 }
 
@@ -610,7 +379,8 @@ function switchTab(tab, btn){
 
 function render(){
     let fShows = shows;
-    if(filter !== 'all') fShows = shows.filter(s => s.region === filter);
+    if(filter === 'upcoming') fShows = shows.filter(s => getSt(s.date) !== 'past');
+    else if(filter !== 'all') fShows = shows.filter(s => s.region === filter);
 
     if(!fShows.length){
         document.getElementById('shows-container').innerHTML = '<div style="text-align:center; padding:30px; color:#666;">No shows in this category.</div>';
@@ -626,17 +396,14 @@ function render(){
         legs[leg].forEach((s) => {
             const d = new Date(s.date+'T12:00:00');
             const st = getSt(s.date);
-            
-            const safeCity = s.city.replace(/'/g, "\\'");
-            const safeVenue = s.venue.replace(/'/g, "\\'");
-            const safeLeg = s.leg.replace(/'/g, "\\'");
-
+            const safeCity = s.city.replace(/'/g, "\'");
+            const safeVenue = s.venue.replace(/'/g, "\'");
+            const safeLeg = s.leg.replace(/'/g, "\'");
             let tagHtml = '';
             if(st === 'past') tagHtml = '<span class="tag tag-done">DONE</span>';
             else if(st === 'live') tagHtml = '<span class="tag tag-live">LIVE</span>';
             else if(st === 'soon') tagHtml = '<span class="tag tag-soon">SOON</span>';
             else tagHtml = '<span class="tag tag-upcoming">UPCOMING</span>';
-
             html += `
                 <div class="show-row" onclick="openM('${s.date}', '${safeCity}', '${safeVenue}', '${safeLeg}')">
                     <div class="date-box">
@@ -658,19 +425,15 @@ function render(){
 function openM(dateStr, city, venue, legName){
     const modal = document.getElementById('setlist-modal');
     document.getElementById('m-city').textContent = city;
-    
     const d = new Date(dateStr + 'T12:00:00');
     document.getElementById('m-date').textContent = `${d.getDate()} ${MON[d.getMonth()]} ${d.getFullYear()} · ${venue}`;
-    
     const list = getSetlistForShow(dateStr, legName);
     let h = '';
-    
     if(list && list.length){
         list.forEach(s => {
             const isStar = s[0] === '★' || s[0] === '—';
             const starClass = isStar ? 'star' : '';
             const noteHtml = s[2] ? `<span class="track-note">${s[2]}</span>` : '';
-            
             h += `
             <div class="setlist-item">
                 <div class="track-num ${starClass}">${s[0]}</div>
@@ -683,7 +446,6 @@ function openM(dateStr, city, venue, legName){
     } else {
         h = '<p style="text-align:center; color:#666; font-size:12px; padding:30px; line-height:1.6;">Setlist not documented yet.<br><span style="color:#444">This leg\'s information will be updated as the tour progresses.</span></p>';
     }
-    
     document.getElementById('m-body').innerHTML = h;
     modal.classList.add('active');
 }
@@ -693,7 +455,6 @@ function closeModal(e, force = false){
         document.getElementById('setlist-modal').classList.remove('active'); 
     }
 }
-
 renderStats();
 render();
 </script>

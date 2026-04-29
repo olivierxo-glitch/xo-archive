@@ -24,73 +24,60 @@ body{background-color: var(--bg-pure); color: var(--text-main); font-family: var
 .live-dot { width: 8px; height: 8px; background: var(--accent-red); border-radius: 50%; box-shadow: 0 0 10px var(--accent-red); animation: pulse 2s infinite; }
 @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.2); } 100% { opacity: 1; transform: scale(1); } }
 .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; border-bottom: 1px solid var(--border-dim); padding-bottom: 15px; }
-.tab-btn { background: transparent; border: 1px solid var(--border-dim); color: var(--text-dim); padding: 10px 25px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px; }
-.tab-btn:hover { color: var(--text-main); border-color: #333; }
-.tab-btn.active { background: #111; color: var(--text-main); border-color: var(--accent-red-dim); box-shadow: 0 0 15px rgba(255,0,0,0.1); }
+.tab-btn { background: transparent; border: 1px solid var(--border-dim); color: var(--text-dim); padding: 10px 25px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.3s; text-transform: uppercase; }
+.tab-btn.active { background: #111; color: var(--text-main); border-color: var(--accent-red-dim); }
 .tab-panel { display: none; animation: fadeIn 0.4s ease; }
 .tab-panel.active { display: block; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 40px; }
-.stat-card { background: var(--bg-card); border: 1px solid var(--border-dim); padding: 20px; border-radius: 12px; text-align: center; transition: 0.3s; }
-.stat-card:hover { border-color: var(--accent-red-dim); }
+.stat-card { background: var(--bg-card); border: 1px solid var(--border-dim); padding: 20px; border-radius: 12px; text-align: center; }
 .stat-val { font-size: 24px; font-weight: 700; display: block; }
-.stat-lab { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; }
+.stat-lab { font-size: 10px; color: var(--text-dim); text-transform: uppercase; margin-top: 5px; }
 .filters { display: flex; justify-content: center; gap: 8px; margin-bottom: 30px; flex-wrap: wrap; }
-.filter-btn { background: transparent; border: 1px solid var(--border-dim); color: var(--text-dim); padding: 6px 16px; border-radius: 5px; font-size: 12px; cursor: pointer; transition: 0.2s; }
+.filter-btn { background: transparent; border: 1px solid var(--border-dim); color: var(--text-dim); padding: 6px 16px; border-radius: 5px; font-size: 12px; cursor: pointer; }
 .filter-btn.active { background: white; color: black; border-color: white; }
 .year-header { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--border-dim); padding-bottom: 10px; margin-bottom: 20px; }
-.show-row { display: grid; grid-template-columns: 80px 1fr auto; align-items: center; padding: 15px; border-radius: 10px; margin-bottom: 4px; cursor: pointer; transition: 0.2s; border: 1px solid transparent; }
-.show-row:hover { background: #0f0f0f; border-color: #222; transform: translateX(8px); }
+.show-row { display: grid; grid-template-columns: 80px 1fr auto; align-items: center; padding: 15px; border-radius: 10px; margin-bottom: 4px; cursor: pointer; transition: 0.2s; }
+.show-row:hover { background: #0f0f0f; transform: translateX(8px); }
 .date-box { text-align: left; }
-.d-day { font-size: 20px; font-weight: 700; line-height: 1; }
+.d-day { font-size: 20px; font-weight: 700; }
 .d-mon { font-size: 10px; color: var(--text-dim); text-transform: uppercase; }
 .venue-info { font-size: 14px; font-weight: 500; }
-.venue-sub { font-size: 11px; color: var(--text-dim); margin-top: 2px;}
-.region-label { font-size: 9px; padding: 2px 6px; border-radius: 3px; background: #222; color: #888; margin-right: 8px; vertical-align: middle; }
+.venue-sub { font-size: 11px; color: var(--text-dim); }
+.region-label { font-size: 9px; padding: 2px 6px; border-radius: 3px; background: #222; color: #888; margin-right: 8px; }
 .tag { font-size: 10px; padding: 4px 12px; border-radius: 4px; font-weight: 600; }
 .tag-done { background: #111; color: #555; }
-.tag-live { background: var(--accent-red); color: white; box-shadow: 0 0 15px rgba(255,0,0,0.4); }
-.tag-soon { background: #1a1505; color: #c5a059; border: 1px solid #332a10;}
-.tag-upcoming { background: rgba(68, 163, 255, 0.1); color: var(--accent-blue); border: 1px solid rgba(68, 163, 255, 0.2); }
+.tag-live { background: var(--accent-red); color: white; }
+.tag-soon { background: #1a1505; color: #c5a059; }
+.tag-upcoming { background: rgba(68, 163, 255, 0.1); color: var(--accent-blue); }
 .outfit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
 .outfit-photo-card { background: var(--bg-card); border: 1px solid var(--border-dim); border-radius: 8px; overflow: hidden; transition: 0.3s; }
 .outfit-photo-card:hover { border-color: var(--accent-red-dim); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.5);}
 .outfit-photo-card img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
 .photo-caption { padding: 15px; background: #050505; text-align: center; }
 .photo-caption strong { font-size: 12px; display: block; color: #fff; margin-bottom: 4px;}
-.photo-caption span { font-size: 9px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px;}
+.photo-caption span { font-size: 9px; color: var(--text-dim); text-transform: uppercase; }
 .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); display: none; align-items: center; justify-content: center; z-index: 1000; }
 .modal-overlay.active { display: flex; }
 .modal-box { background: #050505; border: 1px solid #222; width: 90%; max-width: 500px; max-height: 85vh; overflow-y: auto; border-radius: 15px; padding: 30px; position: relative; }
-.modal-close { position: absolute; top: 15px; right: 15px; background: #111; border: none; color: white; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; transition: 0.2s; }
-.modal-close:hover { background: var(--accent-red); }
+.modal-close { position: absolute; top: 15px; right: 15px; background: #111; border: none; color: white; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; }
 .setlist-item { display: flex; gap: 15px; padding: 12px 0; border-bottom: 1px solid #1a1a1a; align-items: flex-start; }
-.track-num { font-size: 11px; font-weight: bold; color: #555; min-width: 20px; text-align: right; padding-top: 2px; }
+.track-num { font-size: 11px; font-weight: bold; color: #555; min-width: 20px; text-align: right; }
 .track-num.star { color: #c5a059; font-size: 14px;}
-.track-info { display: flex; flex-direction: column; gap: 4px; }
 .track-title { font-size: 14px; color: #eee; font-weight: 500;}
-.track-title.star { color: #c5a059; font-weight: 700;}
-.track-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .track-note { font-size: 11px; color: #888; font-style: italic; }
-@media (max-width: 600px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } .hero h1 { font-size: 28px; } }
 </style>
 </head>
 <body>
-
 <div class="container">
     <div class="hero">
         <h1>XO ARCHIVE</h1>
-        <div class="live-status-bar">
-            <div class="live-dot"></div>
-            <span style="font-size: 11px; letter-spacing: 2px; font-weight: 600; color: var(--text-dim);">LIVE TOUR MONITORING</span>
-        </div>
+        <div class="live-status-bar"><div class="live-dot"></div><span style="font-size: 11px; letter-spacing: 2px; font-weight: 600; color: var(--text-dim);">LIVE TOUR MONITORING</span></div>
     </div>
-
     <div class="tabs">
         <button class="tab-btn active" onclick="switchTab('shows', this)">Concerts</button>
         <button class="tab-btn" onclick="switchTab('outfit', this)">Visual Evolution</button>
     </div>
-
     <div id="tab-shows" class="tab-panel active">
         <div class="stats-grid" id="stats"></div>
         <div class="filters">
@@ -99,367 +86,74 @@ body{background-color: var(--bg-pure); color: var(--text-main); font-family: var
             <button class="filter-btn" onclick="filterShows('canada',this)">Canada</button>
             <button class="filter-btn" onclick="filterShows('latam',this)">Latam</button>
             <button class="filter-btn" onclick="filterShows('europe',this)">Europe</button>
-            <button class="filter-btn" onclick="filterShows('oceania',this)">Oceania</button>
         </div>
         <div id="shows-container"></div>
     </div>
-
     <div id="tab-outfit" class="tab-panel">
       <div class="outfit-grid">
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/59KZNRht/IMG-8231.jpg" alt="Latam 2023 Outfit">
-          <div class="photo-caption">
-            <strong>Latam 2023: Robot Arm Outfit</strong>
-            <span>First Show of the Leg, Monterrey</span>
-          </div>
-        </div>
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/6q2bGHCM/IMG-8226.jpg" alt="Red Coat Outfit">
-          <div class="photo-caption">
-            <strong>Leg 1: Red Coat</strong>
-            <span>North America 2022</span>
-          </div>
-        </div>
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/PxPn2Qmz/IMG-8223.jpg" alt="Toronto Outfit">
-          <div class="photo-caption">
-            <strong>Leg 1: Classic Suit</strong>
-            <span>Toronto / Select Dates</span>
-          </div>
-        </div>
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/3Nm6cSWD/IMG-8229.jpg" alt="Tactical Vest Outfit">
-          <div class="photo-caption">
-            <strong>Leg 2: Tactical Vest</strong>
-            <span>Europe & Latam 2023</span>
-          </div>
-        </div>
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/8CxZgR2W/IMG-8228.jpg" alt="Final Era Outfit">
-          <div class="photo-caption">
-            <strong>Leg 3: Gold & Shadow</strong>
-            <span>2025-2026 Era</span>
-          </div>
-        </div>
-        <div class="outfit-photo-card">
-          <img src="https://i.postimg.cc/zv4tw9NT/IMG-8162.jpg" alt="Latam 2026 Outfit">
-          <div class="photo-caption">
-            <strong>Latam 2026: The Cyborg</strong>
-            <span>2026 Latin America Leg</span>
-          </div>
-        </div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/59KZNRht/IMG-8231.jpg"><div class="photo-caption"><strong>Latam 2023: Red Velvet</strong><span>Monterrey Opening</span></div></div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/6q2bGHCM/IMG-8226.jpg"><div class="photo-caption"><strong>Leg 1: Classic Red</strong><span>North America 2022</span></div></div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/PxPn2Qmz/IMG-8223.jpg"><div class="photo-caption"><strong>After Hours Suit</strong><span>Toronto Special</span></div></div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/3Nm6cSWD/IMG-8229.jpg"><div class="photo-caption"><strong>Leg 2: Tactical Vest</strong><span>Europe & Latam 2023</span></div></div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/8CxZgR2W/IMG-8228.jpg"><div class="photo-caption"><strong>Leg 3: Gold & Shadow</strong><span>2025 Era</span></div></div>
+        <div class="outfit-photo-card"><img src="https://i.postimg.cc/zv4tw9NT/IMG-8162.jpg"><div class="photo-caption"><strong>Latam 2026: Camo Cyborg</strong><span>São Paulo / Rio Leg</span></div></div>
       </div>
-      <div style="margin-top: 40px; text-align: center; border-top: 1px solid #1a1a1a; padding-top: 20px;">
-        <p style="font-size: 11px; color: #444; letter-spacing: 2px; text-transform: uppercase;">OLIVIER</p>
-      </div>
+      <div style="margin-top: 40px; text-align: center; border-top: 1px solid #1a1a1a; padding-top: 20px;"><p style="font-size: 11px; color: #444; letter-spacing: 1px; text-transform: uppercase;">Olivier</p></div>
     </div>
 </div>
-
 <div class="modal-overlay" id="setlist-modal" onclick="closeModal(event)">
     <div class="modal-box">
         <button class="modal-close" onclick="closeModal(event, true)">✕</button>
-        <div style="text-align: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #222;">
-            <h3 id="m-city" style="margin: 0; letter-spacing: 1px; color: #fff;"></h3>
-            <p id="m-date" style="font-size: 11px; color: #666; margin-top: 5px; text-transform: uppercase;"></p>
-        </div>
+        <div style="text-align: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #222;"><h3 id="m-city" style="margin: 0; letter-spacing: 1px; color: #fff;"></h3><p id="m-date" style="font-size: 11px; color: #666; margin-top: 5px; text-transform: uppercase;"></p></div>
         <div id="m-body"></div>
     </div>
 </div>
-
 <script>
 const TODAY = new Date('2026-04-28');
 const MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+const sl_na22 = [['1','Alone Again',''],['2','Gasoline',''],['3','Sacrifice','SHM Remix'],['4','How Do I Make You Love Me?',''],['5',"Can't Feel My Face",''],['6','Take My Breath',''],['7','Hurricane','Ye cover'],['8','Crew Love',''],['9','Low Life',''],['10','Often',''],['11','The Hills',''],['12','Heartless',''],['13','Faith',''],['14','Starboy',''],['15','I Feel It Coming',''],['16','Kiss Land',''],['17','Die for You',''],['18','Call Out My Name',''],['19','After Hours',''],['20','Save Your Tears',''],['21','Blinding Lights','']];
+const sl_sofi_fail = [['1','Alone Again','Show cancelled - Voice loss']];
+const sl_latam23 = [['1','LA FAMA','Rosalía cover'],['2','Party Monster',''],['3','Take My Breath',''],['4','Sacrifice',''],['5','How Do I Make You Love Me?',''],['6',"Can't Feel My Face",''],['7','Lost in the Fire','w/ Gesaffelstein'],['8','Hurricane','Ye cover'],['9','The Hills',''],['10','Kiss Land',''],['11','Often',''],['12','Crew Love',''],['13','Starboy',''],['14','House of Balloons',''],['15','Heartless',''],['16','Low Life',''],['17','Reminder',''],['18','CIRCUS MAXIMUS','Travis Scott cover'],['19','Faith',''],['20','After Hours',''],['21','Earned It',''],['22','Out of Time',''],['23','I Feel It Coming',''],['24','Die for You',''],['25','Is There Someone Else?',''],['26','I Was Never There',''],['27','Wicked Games',''],['28','Call Out My Name',''],['29','The Morning',''],['30','Save Your Tears',''],['31','Less Than Zero',''],['32','Blinding Lights',''],['33','Tears in the Rain',''],['34',"Creepin'",''],['35','Popular',''],['36','In Your Eyes',''],['37','Moth to a Flame','']];
+const sl_latam26 = [['1','Baptized in Fear',''],['2','Open Hearts',''],['3','Wake Me Up',''],['4','After Hours',''],['5','Starboy',''],['6','Heartless',''],['7','Faith',''],['8','Cry for Me',''],['—',"I Can't F**king Sing",'Interlude'],['9','São Paulo','w/ Anitta'],['10','Take My Breath',''],['11','Sacrifice',''],['12','How Do I Make You Love Me?',''],['—',"A Cruel Angel's Thesis",'Interlude cover'],['13',"Can't Feel My Face",''],['14','Lost in the Fire',''],['15','Timeless','w/ Anitta'],['16','Often',''],['17','Given Up on Me',''],['18','I Was Never There',''],['19','The Hills',''],['20','Creepin',''],['21','Niagara Falls',''],['22','One of the Girls',''],['23','Out of Time',''],['24','I Feel It Coming',''],['25','Die for You',''],['26','Is There Someone Else?',''],['27','Wicked Games',''],['28','Call Out My Name',''],['29','The Morning',''],['30','Save Your Tears',''],['31','Less Than Zero',''],['32','Blinding Lights','']];
+const sl_rio26 = [['1','Baptized in Fear',''],['2','Open Hearts',''],['3','Wake Me Up',''],['4','After Hours',''],['★','Rio','⭐ WORLD DEBUT w/ Anitta'],['5','São Paulo',''],['6','Take My Breath',''],['—',"A Cruel Angel's Thesis",'Interlude'],['7','Blinding Lights','']];
 
-// ─── TRAMOS DE SETLISTS ───
-const sl_na22 = [['1','Alone Again',''],['2','Gasoline',''],['3','Sacrifice','Swedish House Mafia Remix'],['4','How Do I Make You Love Me?',''],['5',"Can't Feel My Face",''],['6','Take My Breath',''],['7','Hurricane','Ye cover — intro only'],['—','Dawn FM','Interlude'],['8','Crew Love','Drake cover'],['9','Low Life','Future cover'],['10','Often',''],['11','The Hills',''],['12','Heartless',''],['13','Faith',''],['14','Starboy',''],['15','I Feel It Coming',''],['16','Kiss Land','First time live since 2013'],['17','Die for You','First time live since 2017'],['18','Call Out My Name',''],['19','After Hours','First time live'],['20','Save Your Tears',''],['21','Blinding Lights',''],['22','Is There Someone Else?','Live debut'],['23','Less Than Zero','Live debut'],['24','Wicked Games',''],['—','House of Balloons / Glass Table Girls','Encore'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
-const sl_sofi_fail = [['1','Alone Again','Show stopped here — The Weeknd lost his voice']];
-const sl_eu23 = [['1','Alone Again',''],['2','Gasoline',''],['3','Sacrifice','Swedish House Mafia Remix'],['4','How Do I Make You Love Me?',''],['5',"Can't Feel My Face",''],['6','Take My Breath',''],['—','Dawn FM','Interlude'],['7','Crew Love','Drake cover'],['8','Low Life','Future cover'],['9','Often',''],['10','The Hills',''],['11','Heartless',''],['12','Faith',''],['13','Starboy',''],['14','I Feel It Coming',''],['15','Kiss Land',''],['16','Die for You',''],['17','Call Out My Name',''],['18','After Hours',''],['19','Save Your Tears',''],['20','Blinding Lights',''],['21','Is There Someone Else?',''],['22','Less Than Zero',''],['23','Wicked Games',''],['—','House of Balloons / Glass Table Girls','Encore'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
-const sl_latam23_real = [['1','LA FAMA','Rosalía cover'],['2','Party Monster',''],['3','Take My Breath',''],['4','Sacrifice','Swedish House Mafia Remix'],['5','How Do I Make You Love Me?',''],['6',"Can't Feel My Face",''],['7','Lost in the Fire','w/ Gesaffelstein'],['8','Hurricane','Ye cover'],['9','The Hills',''],['10','Kiss Land','First half only'],['11','Often',''],['12','Crew Love','Drake cover'],['13','Starboy',''],['14','House of Balloons / Glass Table Girls',''],['15','Heartless',''],['16','Low Life','Future cover'],['17','Reminder',''],['18','CIRCUS MAXIMUS','Travis Scott cover'],['19','Faith',''],['20','After Hours',''],['21','Earned It',''],['22','Out of Time',''],['23','I Feel It Coming',''],['24','Die for You',''],['25','Is There Someone Else?',''],['26','I Was Never There',''],['27','Wicked Games',''],['28','Call Out My Name',''],['29','The Morning',''],['30','Save Your Tears',''],['31','Less Than Zero',''],['32','Blinding Lights',''],['33','Tears in the Rain',''],['34',"Creepin'",'Metro Boomin cover'],['35','Popular',''],['36','In Your Eyes',''],['37','Moth to a Flame','w/ Swedish House Mafia']];
-const sl_na25 = [['1','The Abyss',''],['2','Wake Me Up',''],['3','After Hours',''],['4','Opening Night',''],['5','Starboy',''],['6','Heartless',''],['7','Faith',''],['8','Take My Breath',''],['9','Sacrifice','Swedish House Mafia Remix'],['10','How Do I Make You Love Me?',''],['11',"Can't Feel My Face",''],['12','Lost in the Fire','w/ Gesaffelstein'],['13','Often',''],['14','Given Up on Me',''],['15','I Was Never There',''],['16','The Hills',''],['17','Baptized in Fear',''],['18','Open Hearts',''],['19','Cry for Me',''],['20','São Paulo','w/ Anitta'],['21','Timeless','w/ Playboi Carti'],['22','Rather Lie','w/ Playboi Carti'],['23',"Creepin'",''],['24','Niagara Falls',''],['25','One of the Girls',''],['26','Out of Time',''],['27','I Feel It Coming',''],['28','Die for You',''],['29','Is There Someone Else?',''],['30','Wicked Games',''],['31','Call Out My Name',''],['32','Hurry Up Tomorrow',''],['33','Save Your Tears',''],['34','Less Than Zero',''],['35','Blinding Lights',''],['—','In Heaven (Lady in the Radiator Song)','Encore · Peter Ivers & David Lynch cover'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
-const sl_latam26_n1 = [['1','Baptized in Fear',''],['2','Open Hearts',''],['3','Wake Me Up',''],['4','After Hours',''],['5','Starboy',''],['6','Heartless','w/ House of Balloons intro'],['7','Faith',''],['8','Cry for Me',''],['—',"I Can't F**king Sing",'Interlude'],['9','São Paulo','w/ Anitta'],['10','Take My Breath',''],['11','Sacrifice','Swedish House Mafia Remix'],['12','How Do I Make You Love Me?',''],['—',"A Cruel Angel's Thesis","Interludio · Yōko Takahashi (Neon Genesis Evangelion) cover"],['13',"Can't Feel My Face",''],['14','Lost in the Fire','w/ Gesaffelstein'],['15','Timeless','w/ Anitta (live)'],['16','Often',''],['17','Given Up on Me',''],['18','I Was Never There',''],['19','The Hills',''],['20',"Creepin'",''],['21','Niagara Falls',''],['22','One of the Girls',''],['—','Stargirl Interlude','Pre-recorded'],['23','Out of Time',''],['24','I Feel It Coming',''],['25','Die for You',''],['26','Is There Someone Else?',''],['27','Wicked Games',''],['28','Call Out My Name',''],['29','The Morning',''],['30','Save Your Tears',''],['31','Less Than Zero',''],['32','Blinding Lights',''],['—','Without a Warning','Encore'],['—','House of Balloons / Glass Table Girls','Encore'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
-const sl_latam26_n2 = [['1','Baptized in Fear',''],['2','Open Hearts',''],['3','Wake Me Up',''],['4','After Hours',''],['5','Starboy',''],['6','Heartless','w/ House of Balloons intro'],['7','Faith',''],['8','Cry for Me',''],['—',"I Can't F**king Sing",'Interlude'],['9','São Paulo','w/ Anitta'],['10','Take My Breath',''],['11','Sacrifice','Swedish House Mafia Remix'],['12','How Do I Make You Love Me?',''],['—',"A Cruel Angel's Thesis","Interludio · Yōko Takahashi (Neon Genesis Evangelion) cover"],['13',"Can't Feel My Face",''],['14','Lost in the Fire','w/ Gesaffelstein'],['15','Timeless','w/ Anitta (live)'],['16','Often',''],['17','Given Up on Me',''],['18','I Was Never There',''],['19','The Hills',''],['20',"Creepin'",''],['21','Niagara Falls',''],['22','One of the Girls',''],['—','Stargirl Interlude','Pre-recorded'],['23','Out of Time',''],['24','I Feel It Coming',''],['25','Die for You',''],['26','Is There Someone Else?',''],['27','Wicked Games',''],['28','Call Out My Name',''],['★','The Abyss','Added tonight'],['★','Professional','Added tonight'],['29','Save Your Tears',''],['30','Less Than Zero',''],['31','Blinding Lights',''],['—','Without a Warning','Encore'],['—','House of Balloons / Glass Table Girls','Encore'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
-const sl_rio26 = [['1','Baptized in Fear','Shortened version'],['2','Open Hearts','Shortened version'],['3','Wake Me Up','Shortened version'],['4','After Hours','Shortened version'],['5','Starboy',''],['6','Heartless',''],['7','Faith',''],['8','Cry for Me',''],['—',"I Can't F**king Sing",'Interlude'],['9','São Paulo','w/ Anitta'],['—',"Until We're Skin & Bones",'Interlude w/ House of Balloons elements'],['★','Rio','⭐ WORLDWIDE DEBUT w/ Anitta · Directed by Takashi Miike'],['10','Take My Breath',''],['11','Sacrifice','Swedish House Mafia Remix'],['12','How Do I Make You Love Me?',''],['—',"A Cruel Angel's Thesis","Interlude · Yōko Takahashi (Neon Genesis Evangelion) cover"],['13',"Can't Feel My Face",''],['14','Lost in the Fire','w/ Gesaffelstein'],['15','Timeless','w/ Anitta (live)'],['16','Often',''],['17','Given Up on Me',''],['18','I Was Never There',''],['—','Given Up on Me (reprise)','Interlude'],['19','The Hills',''],['20',"Creepin'",''],['21','Niagara Falls',''],['22','One of the Girls',''],['—','Stargirl Interlude','Pre-recorded'],['23','Out of Time','w/ Midnight Predators intro'],['24','I Feel It Coming',''],['25','Die for You',''],['26','Is There Someone Else?',''],['27','Wicked Games',''],['28','Call Out My Name',''],['29','The Abyss',''],['30','Professional',''],['31','Save Your Tears',''],['32','Less Than Zero',''],['33','Blinding Lights',''],['—','Without a Warning','Encore'],['—','House of Balloons / Glass Table Girls','Encore'],['—','Moth to a Flame','Encore · w/ Swedish House Mafia']];
-
-// ─── BASE DE DATOS SHOWS COMPLETA ───
 const shows = [
-{date:'2022-07-14',city:'Philadelphia',country:'USA',venue:'Lincoln Financial Field',region:'usa',leg:'2022 — North America'},
-{date:'2022-07-16',city:'East Rutherford',country:'USA',venue:'MetLife Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2022-07-21',city:'Foxborough',country:'USA',venue:'Gillette Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2022-07-24',city:'Chicago',country:'USA',venue:'Soldier Field',region:'usa',leg:'2022 — North America'},
-{date:'2022-07-27',city:'Detroit',country:'USA',venue:'Ford Field',region:'usa',leg:'2022 — North America'},
-{date:'2022-07-30',city:'Washington D.C.',country:'USA',venue:'FedEx Field',region:'usa',leg:'2022 — North America'},
-{date:'2022-08-04',city:'Tampa',country:'USA',venue:'Raymond James Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2022-08-06',city:'Miami',country:'USA',venue:'Hard Rock Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2022-08-11',city:'Atlanta',country:'USA',venue:'Mercedes-Benz Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2022-08-14',city:'Arlington',country:'USA',venue:'AT&T Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2022-08-18',city:'Denver',country:'USA',venue:'Empower Field at Mile High',region:'usa',leg:'2022 — North America'},
-{date:'2022-08-20',city:'Las Vegas',country:'USA',venue:'Allegiant Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2022-08-23',city:'Vancouver',country:'Canada',venue:'BC Place',region:'canada',leg:'2022 — North America'},
-{date:'2022-08-25',city:'Seattle',country:'USA',venue:'Lumen Field',region:'usa',leg:'2022 — North America'},
-{date:'2022-08-27',city:'Santa Clara',country:'USA',venue:"Levi's Stadium",region:'usa',leg:'2022 — North America'},
-{date:'2022-08-30',city:'Glendale',country:'USA',venue:'State Farm Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2022-09-03',city:'Inglewood',country:'USA',venue:'SoFi Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2022-09-22',city:'Toronto',country:'Canada',venue:'Rogers Centre',region:'canada',leg:'2022 — North America'},
-{date:'2022-09-23',city:'Toronto',country:'Canada',venue:'Rogers Centre',region:'canada',leg:'2022 — North America'},
-{date:'2022-11-26',city:'Inglewood',country:'USA',venue:'SoFi Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2022-11-27',city:'Inglewood',country:'USA',venue:'SoFi Stadium',region:'usa',leg:'2022 — North America'},
-{date:'2023-06-06',city:'Lisbon',country:'Portugal',venue:'Passeio Marítimo de Algés',region:'europe',leg:'2023 — Europe'},
-{date:'2023-06-10',city:'Manchester',country:'UK',venue:'Etihad Stadium',region:'europe',leg:'2023 — Europe'},
-{date:'2023-06-14',city:'Horsens',country:'Denmark',venue:'Nordstern Arena',region:'europe',leg:'2023 — Europe'},
-{date:'2023-06-17',city:'Stockholm',country:'Sweden',venue:'Tele2 Arena',region:'europe',leg:'2023 — Europe'},
-{date:'2023-06-20',city:'Oslo',country:'Norway',venue:'Telenor Arena',region:'europe',leg:'2023 — Europe'},
-{date:'2023-06-24',city:'Amsterdam',country:'Netherlands',venue:'Johan Cruijff ArenA',region:'europe',leg:'2023 — Europe'},
-{date:'2023-06-28',city:'Dublin',country:'Ireland',venue:'Marlay Park',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-02',city:'Hamburg',country:'Germany',venue:'Volksparkstadion',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-04',city:'Düsseldorf',country:'Germany',venue:'Merkur Spiel Arena',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-07',city:'London',country:'UK',venue:'London Stadium',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-08',city:'London',country:'UK',venue:'London Stadium',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-11',city:'Brussels',country:'Belgium',venue:'King Baudouin Stadium',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-14',city:'Frankfurt',country:'Germany',venue:'Deutsche Bank Park',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-18',city:'Madrid',country:'Spain',venue:'Cívitas Metropolitano',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-20',city:'Barcelona',country:'Spain',venue:'Estadi Olímpic',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-22',city:'Nice',country:'France',venue:'Allianz Riviera',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-23',city:'Nice',country:'France',venue:'Allianz Riviera',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-26',city:'Milan',country:'Italy',venue:'Ippodromo La Maura',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-29',city:'Paris',country:'France',venue:'Stade de France',region:'europe',leg:'2023 — Europe'},
-{date:'2023-07-30',city:'Paris',country:'France',venue:'Stade de France',region:'europe',leg:'2023 — Europe'},
-{date:'2023-08-01',city:'Bordeaux',country:'France',venue:'Matmut Atlantique',region:'europe',leg:'2023 — Europe'},
-{date:'2023-08-04',city:'Munich',country:'Germany',venue:'Olympiastadion',region:'europe',leg:'2023 — Europe'},
-{date:'2023-08-06',city:'Prague',country:'Czech Rep.',venue:'Letnany Airport',region:'europe',leg:'2023 — Europe'},
-{date:'2023-08-09',city:'Warsaw',country:'Poland',venue:'PGE Narodowy',region:'europe',leg:'2023 — Europe'},
-{date:'2023-08-12',city:'Tallinn',country:'Estonia',venue:'Tallinn Song Festival Grounds',region:'europe',leg:'2023 — Europe'},
-{date:'2023-08-18',city:'London',country:'UK',venue:'Wembley Stadium',region:'europe',leg:'2023 — Europe'},
-{date:'2023-09-26',city:'Monterrey',country:'Mexico',venue:'Estadio BBVA',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-09-29',city:'Mexico City',country:'Mexico',venue:'Foro Sol',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-09-30',city:'Mexico City',country:'Mexico',venue:'Foro Sol',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-10-04',city:'Bogota',country:'Colombia',venue:'Estadio El Campín',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-10-07',city:'Rio de Janeiro',country:'Brazil',venue:'Estádio Nilton Santos',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-10-10',city:'Sao Paulo',country:'Brazil',venue:'Allianz Parque',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-10-11',city:'Sao Paulo',country:'Brazil',venue:'Allianz Parque',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-10-15',city:'Santiago',country:'Chile',venue:'Estadio Bicentenario',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-10-16',city:'Santiago',country:'Chile',venue:'Estadio Bicentenario',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-10-18',city:'Buenos Aires',country:'Argentina',venue:'Estadio River Plate',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-10-22',city:'Lima',country:'Peru',venue:'Estadio San Marcos',region:'latam',leg:'2023 — Latin America'},
-{date:'2023-10-25',city:'Guadalajara',country:'Mexico',venue:'Estadio Akron',region:'latam',leg:'2023 — Latin America'},
-{date:'2024-10-05',city:'Melbourne',country:'Australia',venue:'Marvel Stadium',region:'oceania',leg:'2024 — Oceania'},
-{date:'2024-10-06',city:'Melbourne',country:'Australia',venue:'Marvel Stadium',region:'oceania',leg:'2024 — Oceania'},
-{date:'2024-10-11',city:'Melbourne',country:'Australia',venue:'Marvel Stadium',region:'oceania',leg:'2024 — Oceania'},
-{date:'2024-10-12',city:'Melbourne',country:'Australia',venue:'Marvel Stadium',region:'oceania',leg:'2024 — Oceania'},
-{date:'2024-10-17',city:'Sydney',country:'Australia',venue:'Accor Stadium',region:'oceania',leg:'2024 — Oceania'},
-{date:'2024-10-18',city:'Sydney',country:'Australia',venue:'Accor Stadium',region:'oceania',leg:'2024 — Oceania'},
-{date:'2024-10-19',city:'Sydney',country:'Australia',venue:'Accor Stadium',region:'oceania',leg:'2024 — Oceania'},
-{date:'2024-10-24',city:'Brisbane',country:'Australia',venue:'Suncorp Stadium',region:'oceania',leg:'2024 — Oceania'},
-{date:'2024-10-25',city:'Brisbane',country:'Australia',venue:'Suncorp Stadium',region:'oceania',leg:'2024 — Oceania'},
-{date:'2024-11-02',city:'Auckland',country:'New Zealand',venue:'Eden Park',region:'oceania',leg:'2024 — Oceania'},
-{date:'2024-11-03',city:'Auckland',country:'New Zealand',venue:'Eden Park',region:'oceania',leg:'2024 — Oceania'},
-{date:'2025-05-09',city:'Glendale',country:'USA',venue:'State Farm Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-05-24',city:'Detroit',country:'USA',venue:'Ford Field',region:'usa',leg:'2025 — North America'},
-{date:'2025-05-27',city:'Las Vegas',country:'USA',venue:'Allegiant Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-05-30',city:'Chicago',country:'USA',venue:'Soldier Field',region:'usa',leg:'2025 — North America'},
-{date:'2025-06-05',city:'East Rutherford',country:'USA',venue:'MetLife Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-06-07',city:'East Rutherford',country:'USA',venue:'MetLife Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-06-10',city:'Foxborough',country:'USA',venue:'Gillette Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-06-14',city:'Minneapolis',country:'USA',venue:'U.S. Bank Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-06-18',city:'Denver',country:'USA',venue:'Empower Field at Mile High',region:'usa',leg:'2025 — North America'},
-{date:'2025-06-21',city:'Seattle',country:'USA',venue:'Lumen Field',region:'usa',leg:'2025 — North America'},
-{date:'2025-06-25',city:'Inglewood',country:'USA',venue:'SoFi Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-06-26',city:'Inglewood',country:'USA',venue:'SoFi Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-07-01',city:'Santa Clara',country:'USA',venue:"Levi's Stadium",region:'usa',leg:'2025 — North America'},
-{date:'2025-07-05',city:'Vancouver',country:'Canada',venue:'BC Place',region:'canada',leg:'2025 — North America'},
-{date:'2025-07-08',city:'Edmonton',country:'Canada',venue:'Commonwealth Stadium',region:'canada',leg:'2025 — North America'},
-{date:'2025-07-11',city:'Edmonton',country:'Canada',venue:'Commonwealth Stadium',region:'canada',leg:'2025 — North America'},
-{date:'2025-07-14',city:'Calgary',country:'Canada',venue:'McMahon Stadium',region:'canada',leg:'2025 — North America'},
-{date:'2025-07-19',city:'Montreal',country:'Canada',venue:'Stade Olympique',region:'canada',leg:'2025 — North America'},
-{date:'2025-07-22',city:'Montreal',country:'Canada',venue:'Stade Olympique',region:'canada',leg:'2025 — North America'},
-{date:'2025-07-27',city:'Toronto',country:'Canada',venue:'Rogers Centre',region:'canada',leg:'2025 — North America'},
-{date:'2025-07-28',city:'Toronto',country:'Canada',venue:'Rogers Centre',region:'canada',leg:'2025 — North America'},
-{date:'2025-08-07',city:'Toronto',country:'Canada',venue:'Rogers Centre',region:'canada',leg:'2025 — North America'},
-{date:'2025-08-08',city:'Toronto',country:'Canada',venue:'Rogers Centre',region:'canada',leg:'2025 — North America'},
-{date:'2025-08-12',city:'Nashville',country:'USA',venue:'Nissan Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-08-16',city:'Orlando',country:'USA',venue:'Camping World Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-08-21',city:'Atlanta',country:'USA',venue:'Mercedes-Benz Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-08-23',city:'Atlanta',country:'USA',venue:'Mercedes-Benz Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-08-27',city:'Arlington',country:'USA',venue:'AT&T Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-08-30',city:'Houston',country:'USA',venue:'NRG Stadium',region:'usa',leg:'2025 — North America'},
-{date:'2025-09-03',city:'San Antonio',country:'USA',venue:'Alamodome',region:'usa',leg:'2025 — North America'},
-{date:'2026-04-20',city:'Mexico City',country:'Mexico',venue:'Estadio GNP Seguros',region:'latam',leg:'2026 — Latin America'},
-{date:'2026-04-21',city:'Mexico City',country:'Mexico',venue:'Estadio GNP Seguros',region:'latam',leg:'2026 — Latin America'},
-{date:'2026-04-22',city:'Mexico City',country:'Mexico',venue:'Estadio GNP Seguros',region:'latam',leg:'2026 — Latin America'},
-{date:'2026-04-26',city:'Rio de Janeiro',country:'Brazil',venue:'Estádio Nilton Santos',region:'latam',leg:'2026 — Latin America'},
-{date:'2026-04-30',city:'Sao Paulo',country:'Brazil',venue:'Estádio MorumBIS',region:'latam',leg:'2026 — Latin America'},
-{date:'2026-05-01',city:'Sao Paulo',country:'Brazil',venue:'Estádio MorumBIS',region:'latam',leg:'2026 — Latin America'},
-{date:'2026-06-11',city:'Manchester',country:'UK',venue:'Etihad Stadium',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-06-12',city:'Manchester',country:'UK',venue:'Etihad Stadium',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-06-19',city:'Copenhagen',country:'Denmark',venue:'Parken',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-06-20',city:'Copenhagen',country:'Denmark',venue:'Parken',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-06-25',city:'Munich',country:'Germany',venue:'Allianz Arena',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-06-26',city:'Munich',country:'Germany',venue:'Allianz Arena',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-06-27',city:'Munich',country:'Germany',venue:'Allianz Arena',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-03',city:'Lille',country:'France',venue:'Stade Pierre-Mauroy',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-04',city:'Lille',country:'France',venue:'Stade Pierre-Mauroy',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-10',city:'Paris',country:'France',venue:'Stade de France',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-11',city:'Paris',country:'France',venue:'Stade de France',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-12',city:'Paris',country:'France',venue:'Stade de France',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-17',city:'Amsterdam',country:'Netherlands',venue:'Johan Cruijff ArenA',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-18',city:'Amsterdam',country:'Netherlands',venue:'Johan Cruijff ArenA',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-21',city:'Nice',country:'France',venue:'Allianz Riviera',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-24',city:'Milan',country:'Italy',venue:'San Siro',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-25',city:'Milan',country:'Italy',venue:'San Siro',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-30',city:'Frankfurt',country:'Germany',venue:'Deutsche Bank Park',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-07-31',city:'Frankfurt',country:'Germany',venue:'Deutsche Bank Park',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-04',city:'Warsaw',country:'Poland',venue:'PGE Narodowy',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-08',city:'Stockholm',country:'Sweden',venue:'Strawberry Arena',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-14',city:'London',country:'UK',venue:'Wembley Stadium',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-15',city:'London',country:'UK',venue:'Wembley Stadium',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-16',city:'London',country:'UK',venue:'Wembley Stadium',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-18',city:'London',country:'UK',venue:'Wembley Stadium',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-19',city:'London',country:'UK',venue:'Wembley Stadium',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-22',city:'Dublin',country:'Ireland',venue:'Croke Park',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-23',city:'Dublin',country:'Ireland',venue:'Croke Park',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-25',city:'Barcelona',country:'Spain',venue:'Estadio Olímpico',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-26',city:'Barcelona',country:'Spain',venue:'Estadio Olímpico',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-28',city:'Madrid',country:'Spain',venue:'Riyadh Air Metropolitano',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-29',city:'Madrid',country:'Spain',venue:'Riyadh Air Metropolitano',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-08-30',city:'Madrid',country:'Spain',venue:'Riyadh Air Metropolitano',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-09-01',city:'Barcelona',country:'Spain',venue:'Estadio Olímpico',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-09-04',city:'Lisbon',country:'Portugal',venue:'Estádio da Luz',region:'europe',leg:'2026 — Europe/UK'},
-{date:'2026-09-05',city:'Lisbon',country:'Portugal',venue:'Estádio da Luz',region:'europe',leg:'2026 — Europe/UK'}
+    {date:'2022-07-14',city:'Philadelphia',venue:'Lincoln Financial Field',region:'usa',leg:'2022 — North America'},
+    {date:'2022-09-03',city:'Inglewood',venue:'SoFi Stadium',region:'usa',leg:'2022 — North America'},
+    {date:'2023-09-26',city:'Monterrey',venue:'Estadio BBVA',region:'latam',leg:'2023 — Latin America'},
+    {date:'2023-09-29',city:'Mexico City',venue:'Foro Sol',region:'latam',leg:'2023 — Latin America'},
+    {date:'2026-04-20',city:'Mexico City',venue:'Estadio GNP Seguros',region:'latam',leg:'2026 — Latin America'},
+    {date:'2026-04-26',city:'Rio de Janeiro',venue:'Estádio Nilton Santos',region:'latam',leg:'2026 — Latin America'}
 ];
 
-// ─── LÓGICA DE ASIGNACIÓN ───
-function getSetlistForShow(dateStr, legName) {
-    if (dateStr === '2022-09-03') return sl_sofi_fail;
-    if (dateStr === '2026-04-20') return sl_latam26_n1;
-    if (dateStr === '2026-04-21' || dateStr === '2026-04-22') return sl_latam26_n2;
-    if (dateStr === '2026-04-26') return sl_rio26;
-    if (dateStr === '2026-04-30' || dateStr === '2026-05-01') return sl_latam26_n2;
-    if (legName.includes('2022')) return sl_na22;
-    if (legName.includes('2023') && legName.includes('Europe')) return sl_eu23;
-    if (legName.includes('2023') && legName.includes('Latin America')) return sl_latam23_real;
-    if (legName.includes('Oceania')) return sl_latam23_real;
-    if (legName.includes('2025')) return sl_na25;
-    return [];
-}
-
-function getSt(d){
-    const diff = Math.round((new Date(d+'T12:00:00')-TODAY)/86400000);
-    return diff < 0 ? 'past' : diff === 0 ? 'live' : diff <= 30 ? 'soon' : 'up';
-}
-
-function renderStats(){
-    const done = shows.filter(s => getSt(s.date) === 'past').length;
-    document.getElementById('stats').innerHTML = `
-        <div class="stat-card"><span class="stat-val">${shows.length}</span><span class="stat-lab">Total Shows</span></div>
-        <div class="stat-card"><span class="stat-val">${done}</span><span class="stat-lab">Completed</span></div>
-        <div class="stat-card"><span class="stat-val">${shows.length - done}</span><span class="stat-lab">Remaining</span></div>
-        <div class="stat-card"><span class="stat-val">24</span><span class="stat-lab">Countries</span></div>
-    `;
-}
-
-let filter = 'all';
-function filterShows(f, b){
-    filter = f;
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    b.classList.add('active');
-    render();
-}
-
-function switchTab(tab, btn){
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('tab-' + tab).classList.add('active');
-}
-
+function getSt(d){ const diff = Math.round((new Date(d+'T12:00:00')-TODAY)/86400000); return diff < 0 ? 'past' : diff === 0 ? 'live' : diff <= 30 ? 'soon' : 'up'; }
+function renderStats(){ document.getElementById('stats').innerHTML = `<div class="stat-card"><span class="stat-val">${shows.length}</span><span class="stat-lab">Total</span></div><div class="stat-card"><span class="stat-val">${shows.filter(s=>getSt(s.date)==='past').length}</span><span class="stat-lab">Done</span></div><div class="stat-card"><span class="stat-val">${shows.filter(s=>getSt(s.date)!=='past').length}</span><span class="stat-lab">Upcoming</span></div><div class="stat-card"><span class="stat-val">24</span><span class="stat-lab">Countries</span></div>`; }
+function filterShows(f, b){ filter = f; document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active')); b.classList.add('active'); render(); }
 function render(){
-    let fShows = shows;
-    if(filter === 'upcoming') fShows = shows.filter(s => getSt(s.date) !== 'past');
-    else if(filter !== 'all') fShows = shows.filter(s => s.region === filter);
-
-    if(!fShows.length){
-        document.getElementById('shows-container').innerHTML = '<div style="text-align:center; padding:30px; color:#666;">No shows in this category.</div>';
-        return;
-    }
-
-    const legs = {};
-    fShows.forEach(s => { if(!legs[s.leg]) legs[s.leg]=[]; legs[s.leg].push(s); });
-
-    let html = '';
-    for(const leg in legs){
-        html += `<div class="year-header">${leg}</div>`;
-        legs[leg].forEach((s) => {
-            const d = new Date(s.date+'T12:00:00');
-            const st = getSt(s.date);
-            
-            const safeCity = s.city.replace(/'/g, "\\'");
-            const safeVenue = s.venue.replace(/'/g, "\\'");
-            const safeLeg = s.leg.replace(/'/g, "\\'");
-
-            let tagHtml = '';
-            if(st === 'past') tagHtml = '<span class="tag tag-done">DONE</span>';
-            else if(st === 'live') tagHtml = '<span class="tag tag-live">LIVE</span>';
-            else if(st === 'soon') tagHtml = '<span class="tag tag-soon">SOON</span>';
-            else tagHtml = '<span class="tag tag-upcoming">UPCOMING</span>';
-
-            html += `
-                <div class="show-row" onclick="openM('${s.date}', '${safeCity}', '${safeVenue}', '${safeLeg}')">
-                    <div class="date-box">
-                        <div class="d-day">${d.getDate()}</div>
-                        <div class="d-mon">${MON[d.getMonth()]}</div>
-                    </div>
-                    <div>
-                        <div class="venue-info"><span class="region-label">${s.region.toUpperCase()}</span>${s.city}</div>
-                        <div class="venue-sub">${s.venue}</div>
-                    </div>
-                    <div>${tagHtml}</div>
-                </div>
-            `;
-        });
-    }
+    let html = ''; let currentLeg = '';
+    shows.forEach((s, idx) => {
+        if(s.leg !== currentLeg) { currentLeg = s.leg; html += `<div class="year-header">${currentLeg}</div>`; }
+        const st = getSt(s.date); const d = new Date(s.date+'T12:00:00');
+        html += `<div class="show-row" onclick="openM('${s.date}', '${s.city}', '${s.venue}')">
+            <div class="date-box"><div class="d-day">${d.getDate()}</div><div class="d-mon">${MON[d.getMonth()]}</div></div>
+            <div><div class="venue-info"><span class="region-label">${s.region.toUpperCase()}</span>${s.city}</div><div class="venue-sub">${s.venue}</div></div>
+            <div><span class="tag ${st==='past'?'tag-done':st==='live'?'tag-live':st==='soon'?'tag-soon':'tag-upcoming'}">${st.toUpperCase()}</span></div>
+        </div>`;
+    });
     document.getElementById('shows-container').innerHTML = html;
 }
-
-function openM(dateStr, city, venue, legName){
-    const modal = document.getElementById('setlist-modal');
+function openM(date, city, venue){
     document.getElementById('m-city').textContent = city;
-    
-    const d = new Date(dateStr + 'T12:00:00');
-    document.getElementById('m-date').textContent = `${d.getDate()} ${MON[d.getMonth()]} ${d.getFullYear()} · ${venue}`;
-    
-    const list = getSetlistForShow(dateStr, legName);
+    document.getElementById('m-date').textContent = venue;
+    let list = date === '2026-04-26' ? sl_rio26 : date === '2022-09-03' ? sl_sofi_fail : date.startsWith('2026') ? sl_latam26 : date.startsWith('2023') ? sl_latam23 : sl_na22;
     let h = '';
-    
-    if(list && list.length){
-        list.forEach(s => {
-            const isStar = s[0] === '★' || s[0] === '—';
-            const starClass = isStar ? 'star' : '';
-            const noteHtml = s[2] ? `<span class="track-note">${s[2]}</span>` : '';
-            
-            h += `
-            <div class="setlist-item">
-                <div class="track-num ${starClass}">${s[0]}</div>
-                <div class="track-info">
-                    <div class="track-title ${starClass}">${s[1]}</div>
-                    ${noteHtml ? `<div class="track-meta">${noteHtml}</div>` : ''}
-                </div>
-            </div>`;
-        });
-    } else {
-        h = '<p style="text-align:center; color:#666; font-size:12px; padding:30px; line-height:1.6;">Setlist not documented yet.<br><span style="color:#444">This leg\'s information will be updated as the tour progresses.</span></p>';
-    }
-    
+    list.forEach(t => h += `<div class="setlist-item"><div class="track-num">${t[0]}</div><div class="track-info"><div class="track-title">${t[1]}</div><span class="track-note">${t[2]}</span></div></div>`);
     document.getElementById('m-body').innerHTML = h;
-    modal.classList.add('active');
+    document.getElementById('setlist-modal').classList.add('active');
 }
-
-function closeModal(e, force = false){ 
-    if(force || e.target.id === 'setlist-modal') {
-        document.getElementById('setlist-modal').classList.remove('active'); 
-    }
-}
-
-renderStats();
-render();
+function closeModal(e, force = false){ if(force || e.target.id === 'setlist-modal') document.getElementById('setlist-modal').classList.remove('active'); }
+function switchTab(tab, btn){ document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active')); btn.classList.add('active'); document.getElementById('tab-' + tab).classList.add('active'); }
+renderStats(); render();
 </script>
 </body>
 </html>

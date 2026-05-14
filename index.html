@@ -474,6 +474,7 @@ body{
       <button class="filter-btn" onclick="filterShows('latam',this)">Latam</button>
       <button class="filter-btn" onclick="filterShows('europe',this)">Europe</button>
       <button class="filter-btn" onclick="filterShows('oceania',this)">Oceania</button>
+      <button class="filter-btn" onclick="filterShows('asia',this)">Asia</button>
     </div>
     <div id="shows-container"></div>
   </div>
@@ -1062,11 +1063,30 @@ const shows = [
 {date:'2026-08-30',city:'Madrid',country:'Spain',venue:'Riyadh Air Metropolitano',region:'europe',leg:'Leg 7 — Europe & UK 2026'},
 {date:'2026-09-01',city:'Barcelona',country:'Spain',venue:'Estadio Olímpico',region:'europe',leg:'Leg 7 — Europe & UK 2026'},
 {date:'2026-09-04',city:'Lisbon',country:'Portugal',venue:'Estádio da Luz',region:'europe',leg:'Leg 7 — Europe & UK 2026'},
-{date:'2026-09-05',city:'Lisbon',country:'Portugal',venue:'Estádio da Luz',region:'europe',leg:'Leg 7 — Europe & UK 2026'}
+// ── LEG 8 — ASIA 2026
+{date:'2026-09-20',city:'Tokyo',country:'Japan',venue:'Belluna Dome',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-09-26',city:'Jakarta',country:'Indonesia',venue:'Jakarta International Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-09-27',city:'Jakarta',country:'Indonesia',venue:'Jakarta International Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-10-02',city:'Singapore',country:'Singapore',venue:'National Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-10-03',city:'Singapore',country:'Singapore',venue:'National Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-10-07',city:'Seoul',country:'South Korea',venue:'Goyang Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-10-08',city:'Seoul',country:'South Korea',venue:'Goyang Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-10-11',city:'Bangkok',country:'Thailand',venue:'Rajamangala Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-10-30',city:'Hong Kong',country:'China',venue:'Kai Tak Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-10-31',city:'Hong Kong',country:'China',venue:'Kai Tak Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-11-04',city:'Kuala Lumpur',country:'Malaysia',venue:'TM Stadium National',region:'asia',leg:'Leg 8 — Asia 2026'}
 ];
 
 // ── UPDATES LOG ──────────────────────────────────────────────────────
 const updates = [
+    {
+        date: '2026-05-11',
+        type: 'shows',
+        badge: 'badge-shows',
+        label: 'SHOWS ADDED',
+        title: '🌏 Leg 8 confirmed — Asia 2026 (FINAL LEG)',
+        body: '11 shows announced across 7 países: Tokyo (Belluna Dome · Sep 20), Jakarta x2 (Sep 26-27), Singapore x2 (Oct 2-3), Seoul x2 (Oct 7-8), Bangkok (Oct 11), Hong Kong x2 (Oct 30-31) y Kuala Lumpur (Nov 4). Producido por Live Nation. Este leg marca el cierre definitivo de la gira más taquillera de un artista masculino en la historia, con más de $1 billón recaudado y 7.5M de tickets vendidos en 153 shows.'
+    },
     {
         date: '2026-05-05',
         type: 'setlist',

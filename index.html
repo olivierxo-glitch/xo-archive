@@ -714,6 +714,61 @@ body > * { position: relative; z-index: 1; }
 }
 .feedback-close:hover { color: #fff; background: #333; }
 
+
+/* SONG STATS TAB */
+.stats-song-row {
+    display: grid;
+    grid-template-columns: 30px 1fr 60px;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #111;
+}
+.stats-song-rank {
+    font-size: 12px;
+    color: #444;
+    font-weight: 700;
+    text-align: center;
+}
+.stats-song-info { min-width: 0; }
+.stats-song-name {
+    font-size: 13px;
+    color: #eee;
+    font-weight: 500;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.stats-bar-track {
+    height: 5px;
+    background: #111;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.stats-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+}
+.stats-bar-fill.most { background: linear-gradient(90deg, #4a0000, #ff0000); }
+.stats-bar-fill.least { background: linear-gradient(90deg, #1a1a1a, #444); }
+.stats-song-count {
+    font-size: 11px;
+    color: #666;
+    text-align: right;
+    font-weight: 600;
+}
+.stats-section-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #555;
+    margin: 30px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1a1a1a;
+}
+.stats-section-title:first-child { margin-top: 0; }
+
 </style>
 </head>
 <body>
@@ -738,6 +793,7 @@ body > * { position: relative; z-index: 1; }
   <div class="tabs">
     <button class="tab-btn active" onclick="switchTab('shows', this)">Concerts</button>
     <button class="tab-btn" onclick="switchTab('outfit', this)">Visual Evolution</button>
+    <button class="tab-btn" onclick="switchTab('songstats', this)">Song Stats</button>
     <button class="tab-btn" onclick="switchTab('updates', this)">Updates <span class="new-badge">NEW</span></button>
     <button class="tab-btn" onclick="switchTab('socials', this)">Socials</button>
   </div>
@@ -807,6 +863,263 @@ body > * { position: relative; z-index: 1; }
     </div>
     <div style="margin-top: 40px; text-align: center; border-top: 1px solid #1a1a1a; padding-top: 20px;">
       <p style="font-size: 11px; color: #444; letter-spacing: 1px; text-transform: uppercase;">XOOARCHIVE · <a href="https://twitter.com/XOOARCHIVE" target="_blank" style="color:#555; text-decoration:none;">@XOOARCHIVE</a></p>
+    </div>
+  </div>
+
+
+  <!-- TAB: SONG STATS -->
+  <div id="tab-songstats" class="tab-panel">
+    <div class="updates-header">
+      <h2>Song Statistics</h2>
+    </div>
+    <p style="font-size:11px; color:#444; text-align:center; margin-bottom:10px;">Based on 149 documented setlists across the entire tour</p>
+
+    <div class="stats-section-title">🔥 Most Performed</div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">1</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Sacrifice</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:100%"></div></div>
+        </div>
+        <div class="stats-song-count">149/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">2</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">How Do I Make You Love Me?</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:100%"></div></div>
+        </div>
+        <div class="stats-song-count">149/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">3</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Can't Feel My Face</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">4</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">The Hills</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">5</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Often</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">6</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Starboy</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">7</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Heartless</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">8</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">After Hours</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">9</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">I Feel It Coming</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">10</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Die for You</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">11</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Is There Someone Else?</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">12</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">I Was Never There</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">13</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Wicked Games</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">14</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Call Out My Name</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">15</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Save Your Tears</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill most" style="width:99%"></div></div>
+        </div>
+        <div class="stats-song-count">148/149</div>
+      </div>
+
+    <div class="stats-section-title">💎 Rarest / Least Performed</div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">1</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">The Party & the After Party</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">1/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">2</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Family</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">1/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">3</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Jealous Guy</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">1/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">4</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Coming Down</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">1/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">5</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">The Knowing</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">1/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">6</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Like a God</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">1/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">7</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Tell Your Friends</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">1/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">8</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Opening Night</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">1/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">9</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Hurry Up Tomorrow</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">1/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">10</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Odd Look</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">1/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">11</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Take Me Back</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">2/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">12</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Take Me Back to LA</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">2/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">13</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Every Angel Is Terrifying/Wake me Up</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:1%"></div></div>
+        </div>
+        <div class="stats-song-count">2/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">14</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">A Lesser Man</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:2%"></div></div>
+        </div>
+        <div class="stats-song-count">3/149</div>
+      </div>
+      <div class="stats-song-row">
+        <div class="stats-song-rank">15</div>
+        <div class="stats-song-info">
+          <div class="stats-song-name">Another One Of Me</div>
+          <div class="stats-bar-track"><div class="stats-bar-fill least" style="width:2%"></div></div>
+        </div>
+        <div class="stats-song-count">3/149</div>
+      </div>
+
+    <div style="margin-top:30px; text-align:center; border-top:1px solid #111; padding-top:20px;">
+      <p style="font-size:11px; color:#333; letter-spacing:1px; text-transform:uppercase; margin:0;">XOOARCHIVE · <a href="https://twitter.com/XOOARCHIVE" target="_blank" style="color:#555; text-decoration:none;">@XOOARCHIVE</a></p>
     </div>
   </div>
 

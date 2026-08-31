@@ -1929,6 +1929,7 @@ const shows = [
 {date:'2026-08-30',city:'Madrid',country:'Spain',venue:'Riyadh Air Metropolitano',region:'europe',leg:'Leg 7 — Europe & UK 2026'},
 {date:'2026-09-01',city:'Barcelona',country:'Spain',venue:'Estadio Olímpico',region:'europe',leg:'Leg 7 — Europe & UK 2026'},
 {date:'2026-09-04',city:'Lisbon',country:'Portugal',venue:'Estádio da Luz',region:'europe',leg:'Leg 7 — Europe & UK 2026'},
+{date:'2026-09-05',city:'Lisbon',country:'Portugal',venue:'Estádio da Luz',region:'europe',leg:'Leg 7 — Europe & UK 2026'},
 // ── LEG 8 — ASIA 2026
 {date:'2026-09-19',city:'Tokyo',country:'Japan',venue:'Belluna Dome',region:'asia',leg:'Leg 8 — Asia 2026'},
 {date:'2026-09-20',city:'Tokyo',country:'Japan',venue:'Belluna Dome',region:'asia',leg:'Leg 8 — Asia 2026'},
@@ -1940,6 +1941,7 @@ const shows = [
 {date:'2026-10-08',city:'Seoul',country:'South Korea',venue:'Goyang Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
 {date:'2026-10-11',city:'Bangkok',country:'Thailand',venue:'Rajamangala Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
 {date:'2026-10-12',city:'Bangkok',country:'Thailand',venue:'Rajamangala Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
+{date:'2026-10-13',city:'Bangkok',country:'Thailand',venue:'Rajamangala Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
 {date:'2026-10-24',city:'Hong Kong',country:'China',venue:'Kai Tak Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
 {date:'2026-10-25',city:'Hong Kong',country:'China',venue:'Kai Tak Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
 {date:'2026-10-30',city:'Hong Kong',country:'China',venue:'Kai Tak Stadium',region:'asia',leg:'Leg 8 — Asia 2026'},
@@ -2112,7 +2114,7 @@ function getSt(d){
 
 function fmtDate(dateStr){
     const d = new Date(dateStr + 'T12:00:00');
-    return `${MON[["1", "Baptized in Fear", ""], ["2", "Open Hearts", ""], ["3", "Wake Me Up", ""], ["4", "After Hours", ""], ["5", "Starboy", ""], ["6", "Heartless", ""], ["7", "Faith", ""], ["8", "Cry for Me", ""], ["9", "São Paulo", "ft. Anitta"], ["—", "Until We're Skin & Bones", "Interlude"], ["10", "Take My Breath", ""], ["11", "Sacrifice", "Swedish House Mafia Remix"], ["12", "How Do I Make You Love Me?", ""], ["—", "EVA", "Evangelion sample"], ["13", "Can't Feel My Face", ""], ["14", "Lost in the Fire", "w/ Gesaffelstein"], ["15", "Often", ""], ["16", "Given Up on Me", ""], ["17", "I Was Never There", ""], ["18", "The Hills", ""], ["19", "Timeless", "ft. Playboi Carti"], ["20", "Rather Lie", "ft. Playboi Carti"], ["21", "Creepin'", ""], ["22", "Niagara Falls", ""], ["23", "One of the Girls", ""], ["—", "Stargirl", "Interlude"], ["24", "Out of Time", ""], ["25", "I Feel It Coming", ""], ["26", "Die for You", ""], ["27", "Is There Someone Else?", ""], ["28", "Wicked Games", ""], ["29", "Call Out My Name", ""], ["30", "The Abyss", ""], ["—", "Professional", "Transition"], ["31", "Save Your Tears", ""], ["32", "Less Than Zero", ""], ["33", "Blinding Lights", ""], ["—", "Without a Warning", "Encore"], ["—", "House of Balloons", "Encore"], ["—", "Moth to a Flame", "Encore"]]} ${d.getFullYear()}`;
+    return `${MON[["1", "Baptized in Fear", ""], ["2", "Open Hearts", ""], ["3", "Wake Me Up", ""], ["4", "After Hours", ""], ["5", "Starboy", ""], ["6", "Heartless", ""], ["7", "Faith", ""], ["8", "Cry for Me", ""], ["9", "São Paulo", "ft. Anitta"], ["—", "Until We're Skin & Bones", "Interlude"], ["10", "Take My Breath", ""], ["11", "Sacrifice", "Swedish House Mafia Remix"], ["—", "Wanderlust", "Snippet"], ["12", "How Do I Make You Love Me?", ""], ["—", "EVA", "Evangelion sample"], ["13", "Can't Feel My Face", ""], ["14", "Lost in the Fire", "w/ Gesaffelstein"], ["15", "Often", ""], ["16", "Given Up on Me", ""], ["17", "I Was Never There", ""], ["18", "The Hills", ""], ["19", "Timeless", "ft. Playboi Carti"], ["20", "Rather Lie", "ft. Playboi Carti"], ["21", "Creepin'", ""], ["22", "Niagara Falls", ""], ["23", "One of the Girls", ""], ["—", "Stargirl", "Interlude"], ["24", "Out of Time", ""], ["25", "I Feel It Coming", ""], ["26", "Die for You", ""], ["27", "Is There Someone Else?", ""], ["28", "Wicked Games", ""], ["29", "Call Out My Name", ""], ["30", "The Abyss", ""], ["—", "Professional", "Transition"], ["31", "Save Your Tears", ""], ["32", "Less Than Zero", ""], ["33", "Blinding Lights", ""], ["—", "Without a Warning", "Encore"], ["—", "House of Balloons", "Encore"], ["—", "Moth to a Flame", "Encore"]]} ${d.getFullYear()}`;
 }
 
 // ── RENDER STATS ─────────────────────────────────────────────────────

@@ -1654,6 +1654,12 @@ const sl_rio26 = [
 // Shows that have a warning note in the modal
 const SHOW_WARNINGS = {};
 
+const KISS_LAND_SONGS = new Set([
+  "Professional", "The Town", "Adaptation", "Love in the Sky",
+  "Belong to the World", "Live For", "Wanderlust", "Kiss Land",
+  "Pretty", "Tears in the Rain"
+]);
+
 const SETLIST_MAP = {
   "2022-07-14": [["1", "Alone Again", "First half"], ["2", "Gasoline", ""], ["3", "Sacrifice Remix", ""], ["4", "How Do I Make You Love Me?", ""], ["5", "Cant Feel My Face", ""], ["6", "Take My Breath", ""], ["7", "Hurricane", "Ye Cover first chorus only"], ["8", "The Hills", ""], ["9", "Often", ""], ["10", "Crew Love", "Drake Cover"], ["11", "Starboy", ""], ["12", "Heartless", ""], ["13", "Low Life", "Future Cover"], ["14", "Or Nah", "Ty Dolla $ing cover"], ["15", "Kiss Land", "First half"], ["16", "Party Monster", ""], ["17", "Faith", "First Half"], ["18", "After Hours", "Live Debut"], ["19", "Out Of Time", ""], ["20", "I Feel It Coming", ""], ["21", "Die For You", ""], ["22", "Is There Someone else?", ""], ["23", "I Was Never There", "First Half"], ["24", "Wicked Games", ""], ["25", "Call Out My Name", ""], ["26", "The Morning", ""], ["27", "Save Your Tears", ""], ["28", "Less Than Zero", ""], ["29", "Blinding Lights", ""]],
   "2022-07-16": [["1", "Alone Again", "First half"], ["2", "Gasoline", ""], ["3", "Sacrifice Remix", ""], ["4", "How Do I Make You Love Me?", ""], ["5", "Cant Feel My Face", ""], ["6", "Take My Breath", ""], ["7", "Hurricane", "Ye Cover"], ["8", "The Hills", ""], ["9", "Often", ""], ["10", "Crew Love", "Drake Cover"], ["11", "Starboy", ""], ["12", "Heartless", ""], ["13", "Low Life", "Future Cover"], ["14", "Or Nah", "Ty Dolla $ing cover"], ["15", "Kiss Land", "First half"], ["16", "Party Monster", ""], ["17", "Faith", "First Half"], ["18", "After Hours", ""], ["19", "Out Of Time", ""], ["20", "I Feel It Coming", ""], ["21", "Die For You", ""], ["22", "Is There Someone else?", ""], ["23", "I Was Never There", ""], ["24", "Wicked Games", ""], ["25", "Call Out My Name", ""], ["26", "The Morning", ""], ["27", "Save Your Tears", ""], ["28", "Less Than Zero", ""], ["29", "Blinding Lights", ""]],
@@ -2306,7 +2312,7 @@ function openM(dateStr, city, venue, legName){
             <div class="setlist-item">
                 <div class="track-num ${starClass}">${s[0]}</div>
                 <div class="track-info">
-                    <div class="track-title ${starClass}">${s[1]}</div>
+                    <div class="track-title ${starClass}">${s[1]}${KISS_LAND_SONGS.has(s[1]) ? ' 💚' : ''}</div>
                     ${noteHtml}
                 </div>
             </div>`;

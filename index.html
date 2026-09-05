@@ -2312,7 +2312,7 @@ function openM(dateStr, city, venue, legName){
             <div class="setlist-item">
                 <div class="track-num ${starClass}">${s[0]}</div>
                 <div class="track-info">
-                    <div class="track-title ${starClass}">${s[1]}${(KISS_LAND_SONGS.has(s[1]) || [...KISS_LAND_SONGS].some(kl => (s[2]||'').includes(kl))) ? ' 💚' : ''}</div>
+                    <div class="track-title ${starClass}">${s[1]}${KISS_LAND_SONGS.has(s[1]) ? ' 💚' : ''}</div>
                     ${noteHtml}
                 </div>
             </div>`;
